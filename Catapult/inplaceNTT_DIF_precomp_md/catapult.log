@@ -1,0 +1,720 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Thu Sep 16 01:43:12 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log37503202ca71f.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+project load /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1.ccs
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/catapult.log"
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/td_ccore_solutions/mult_81c1b7d49a9f3c7ad693045e78ab662170f2_0/.sif/solIndex_2_a9e58566-d158-4b2a-98ac-9f9681275d9a.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/td_ccore_solutions/modulo_sub_1bb50f5def739ec4079134016dea7c766383_0/.sif/solIndex_2_02f47ffc-b59d-4712-a30a-b0c64adf42ee.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/td_ccore_solutions/modulo_add_86a4e13eef67db9706364ef65c383d9d60fa_0/.sif/solIndex_2_d0e64cea-b47f-4f6c-b830-a3dd268c2c16.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/td_ccore_solutions/mult_a1e233277d0d5c0cfe721a9995382bef70e4_0/.sif/solIndex_2_757abc6e-b371-4079-b6f8-822f1ccd8a8c.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/td_ccore_solutions/modulo_sub_221cc38820a0941d4772a0cf032267436375_0/.sif/solIndex_2_33c99071-4b83-4ef2-9c32-4a9638a9ed96.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/td_ccore_solutions/modulo_add_8b3f96d27942dd35d77cd1e313d6ead560ec_0/.sif/solIndex_2_933be97e-f20d-4394-8c9c-e26a5f8ef7ee.xml' ... (LIB-129)
+option set Input/CppStandard c++98
+# c++98
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_1/inPlaceNTT_DIF_precomp.v11/.dut_inst_info.tcl ./Catapult_1/inPlaceNTT_DIF_precomp.v11/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult_1/inPlaceNTT_DIF_precomp.v11/.dut_inst_info.tcl ./Catapult_1/inPlaceNTT_DIF_precomp.v11/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_in_wait_v1.v 
+# -- Compiling module ccs_sync_in_wait_v1
+# 
+# Top level modules:
+# 	ccs_sync_in_wait_v1
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_sync_out_wait_v1.v 
+# -- Compiling module ccs_sync_out_wait_v1
+# 
+# Top level modules:
+# 	ccs_sync_out_wait_v1
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v 
+# -- Compiling module mgc_out_dreg_v2
+# 
+# Top level modules:
+# 	mgc_out_dreg_v2
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/mult_a1e233277d0d5c0cfe721a9995382bef70e4_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/mult_a1e233277d0d5c0cfe721a9995382bef70e4_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work work ../td_ccore_solutions/mult_a1e233277d0d5c0cfe721a9995382bef70e4_0/rtl.v 
+# -- Compiling module mult_core
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/modulo_sub_221cc38820a0941d4772a0cf032267436375_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/modulo_sub_221cc38820a0941d4772a0cf032267436375_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work work ../td_ccore_solutions/modulo_sub_221cc38820a0941d4772a0cf032267436375_0/rtl.v 
+# -- Compiling module modulo_sub_core
+# -- Compiling module modulo_sub
+# 
+# Top level modules:
+# 	modulo_sub
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: ../td_ccore_solutions/modulo_add_8b3f96d27942dd35d77cd1e313d6ead560ec_0/rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     ../td_ccore_solutions/modulo_add_8b3f96d27942dd35d77cd1e313d6ead560ec_0/rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work work ../td_ccore_solutions/modulo_add_8b3f96d27942dd35d77cd1e313d6ead560ec_0/rtl.v 
+# -- Compiling module modulo_add_core
+# -- Compiling module modulo_add
+# 
+# Top level modules:
+# 	modulo_add
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v 
+# -- Compiling module mgc_shift_l_v5
+# 
+# Top level modules:
+# 	mgc_shift_l_v5
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:51:05 on Sep 16,2021
+# vlog -work work rtl.v 
+# -- Compiling module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_12_32_4096_4096_32_1_gen
+# -- Compiling module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_12_32_4096_4096_32_1_gen
+# -- Compiling module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_13_12_32_4096_4096_32_1_gen
+# -- Compiling module inPlaceNTT_DIF_precomp_core_core_fsm
+# -- Compiling module inPlaceNTT_DIF_precomp_core_staller
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Compiling module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1
+# -- Compiling module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1
+# -- Compiling module inPlaceNTT_DIF_precomp_core_vec_rsci_1
+# -- Compiling module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Compiling module inPlaceNTT_DIF_precomp_core
+# -- Compiling module inPlaceNTT_DIF_precomp
+# 
+# Top level modules:
+# 	inPlaceNTT_DIF_precomp
+# End time: 01:51:05 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 01:51:05 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: variable or field 'mc_testbench_capture_IN' declared void
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(8): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                             ^
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                    ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                  ^
+# Error: ./scverify/ccs_block_macros.h(9): error: variable or field 'mc_testbench_capture_OUT' declared void
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(9): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                 ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                              ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                     ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                   ^
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 01:51:07 on Sep 16,2021, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/main.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 01:51:14 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: variable or field 'mc_testbench_capture_IN' declared void
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(8): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                             ^
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                    ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                  ^
+# Error: ./scverify/ccs_block_macros.h(9): error: variable or field 'mc_testbench_capture_OUT' declared void
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(9): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                 ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                              ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                     ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                   ^
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 01:51:16 on Sep 16,2021, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/main.cpp.cxxts] Error 11
+option set Input/CppStandard c++98
+# c++98
+option set Input/TargetPlatform x86_64
+# x86_64
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 01:51:29 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: variable or field 'mc_testbench_capture_IN' declared void
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(8): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                             ^
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                    ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                  ^
+# Error: ./scverify/ccs_block_macros.h(9): error: variable or field 'mc_testbench_capture_OUT' declared void
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(9): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                 ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                              ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                     ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                   ^
+# ../../src/main.cpp: In function 'void gettwiddle(DATA_TYPE*, DATA_TYPE*, DATA_TYPE, DATA_TYPE)':
+# ../../src/main.cpp:55:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+#   for(int i=0; i < VECTOR_SIZE; i++){
+#                  ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 01:51:30 on Sep 16,2021, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/main.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 01:52:20 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: variable or field 'mc_testbench_capture_IN' declared void
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(8): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                             ^
+# In file included from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_scverify.h:247:0,
+#                  from ../../src/main.cpp:3:
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                    ^
+# Error: ./scverify/ccs_block_macros.h(8): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                       ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                         ^
+# Error: ./scverify/ccs_block_macros.h(8): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_IN( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                  ^
+# Error: ./scverify/ccs_block_macros.h(9): error: variable or field 'mc_testbench_capture_OUT' declared void
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+# Error: ./scverify/ccs_block_macros.h(9): error: 'run' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                 ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'vec'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'p'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'r'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                              ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                     ^
+# Error: ./scverify/ccs_block_macros.h(9): error: expected primary-expression before 'twiddle_h'
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                        ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'ac_sync' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                          ^
+# Error: ./scverify/ccs_block_macros.h(9): error: 'complete' was not declared in this scope
+#  extern void mc_testbench_capture_OUT( ac_sync &run,  ac_int<32, false > vec[4096], ac_int<32, false > p, ac_int<32, false > r,  ac_int<32, false > twiddle[4096],  ac_int<32, false > twiddle_h[4096],  ac_sync &complete);
+#                                                                                                                                                                                                                   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 01:52:22 on Sep 16,2021, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/main.cpp.cxxts] Error 11
+# File '$PROJECT_HOME/Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/ccs_block_macros.h' saved
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/main.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/main.cpp
+# Start time: 01:52:55 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 01:52:57 on Sep 16,2021, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/ntt.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt.cpp
+# Start time: 01:52:57 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 01:52:58 on Sep 16,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/utils.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/utils.cpp
+# Start time: 01:52:58 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 01:52:59 on Sep 16,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 01:52:59 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 01:53:03 on Sep 16,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=inPlaceNTT_DIF_precomp -DCCS_DESIGN_FUNC_inPlaceNTT_DIF_precomp -DCCS_DESIGN_TOP_inPlaceNTT_DIF_precomp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 01:53:03 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
+#                  from scverify/mc_testbench.h:30,
+#                  from scverify/scverify_top.cpp:4:
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
+# scverify/scverify_top.cpp:264:30:   required from here
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
+#      mutable sc_event* m_posedge_event_p; // positive edge event if present.
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:740:23: warning:   'sc_dt::uint64 sc_core::sc_signal<sc_dt::sc_logic>::m_change_stamp' [-Wreorder]
+#      sc_dt::uint64     m_change_stamp;    // delta of last event
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
+#      sc_signal()
+#      ^
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 01:53:11 on Sep 16,2021, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 01:53:11 on Sep 16,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 01:53:12 on Sep 16,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls" -L "./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 01:53:12 on Sep 16,2021
+# vopt "+acc=npr" -L ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls -L ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp_md/Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module inPlaceNTT_DIF_precomp
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_13_12_32_4096_4096_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_12_32_4096_4096_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_12_32_4096_4096_32_1_gen
+# -- Loading module inPlaceNTT_DIF_precomp_core
+# -- Loading module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module mult
+# -- Loading module mult_core
+# -- Loading module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2
+# -- Loading module modulo_sub
+# -- Loading module modulo_sub_core
+# -- Loading module modulo_add
+# -- Loading module modulo_add_core
+# -- Loading module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci
+# -- Loading module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci
+# -- Loading module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj
+# -- Loading module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj
+# -- Loading module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl
+# -- Loading module inPlaceNTT_DIF_precomp_core_staller
+# -- Loading module inPlaceNTT_DIF_precomp_core_core_fsm
+# Optimizing 51 design-units (inlining 0/63 module instances, 0/0 UDP instances):
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__1)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast__2)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj_vec_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj_p_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_r_rsc_triosy_obj_r_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsc_triosy_obj_twiddle_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsc_triosy_obj_twiddle_h_rsc_triosy_wait_ctrl(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_core_fsm(fast)
+# -- Optimizing module mult_core(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__1)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__2)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast__3)
+# -- Optimizing module modulo_add_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsci_1_vec_rsc_wait_ctrl(fast)
+# -- Optimizing module modulo_sub_core(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1_twiddle_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1_twiddle_h_rsc_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_13_12_32_4096_4096_32_1_gen(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_16_12_32_4096_4096_32_1_gen(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_Xilinx_RAMS_BLOCK_DPRAM_RBW_DUAL_rwport_17_12_32_4096_4096_32_1_gen(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_rsci_1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_twiddle_h_rsci_1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_complete_rsci_complete_wait_ctrl(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_staller(fast)
+# -- Optimizing module mult(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_wait_dp(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_run_rsci_run_wait_ctrl(fast)
+# -- Optimizing module modulo_sub(fast)
+# -- Optimizing module modulo_add(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_sync_in_wait_v1(fast)
+# -- Optimizing module ./Catapult_1/inPlaceNTT_DIF_precomp.v11/scverify/rtl_v_msim/mgc_hls.ccs_sync_out_wait_v1(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_vec_rsc_triosy_obj(fast)
+# -- Optimizing module inPlaceNTT_DIF_precomp_core_p_rsc_triosy_obj(fast)
+# Optimized design name is scverify_top_opt
+# End time: 01:53:12 on Sep 16,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)

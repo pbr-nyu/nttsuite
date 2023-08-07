@@ -1,0 +1,197 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.15 seconds, memory usage 1445228kB, peak memory usage 1445228kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt.cpp
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+solution file add ./src/ntt_tb.cpp -exclude true
+go compile
+/INPUTFILES/1
+/INPUTFILES/2
+option set Input/TargetPlatform x86_64
+Pragma 'hls_design<top>' detected on routine 'six_step' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/sixstep/catapult.log"
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+c++11
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/sixstep/src/ntt.cpp (CIN-69)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'six_step.v1': elapsed time 3.92 seconds, memory usage 1445228kB, peak memory usage 1445228kB (SOL-9)
+Synthesizing routine 'six_step' (CIN-13)
+Found top design routine 'six_step' specified by directive (CIN-52)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'six_step' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'six_step.v1' (SOL-8)
+Inlining routine 'operator*<64, false>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator*<64, false>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+INOUT port 'tw' is only used as an input. (OPT-10)
+Optimizing block '/six_step' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+INOUT port 'revArr' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Loop '/six_step/core/S2_OUTER_LOOP' iterated at most 5 times. (LOOP-2)
+Loop '/six_step/core/S2_OUTER_LOOP:for' iterated at most 16 times. (LOOP-2)
+Loop '/six_step/core/S2_COPY_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S2_COPY_LOOP:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S2_OUTER_LOOP:for:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S1_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_COPY_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_COPY_LOOP:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S6_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_OUTER_LOOP:for:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S34_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_OUTER_LOOP' iterated at most 5 times. (LOOP-2)
+Loop '/six_step/core/S5_OUTER_LOOP:for' iterated at most 16 times. (LOOP-2)
+Design 'six_step' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/sixstep/sixstep_reloop/six_step.v1/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'six_step.v1': elapsed time 1.20 seconds, memory usage 1445748kB, peak memory usage 1445748kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1926-2
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'six_step.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+solution library add Xilinx_RAMS
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'six_step.v2': elapsed time 0.39 seconds, memory usage 1445848kB, peak memory usage 1511904kB (SOL-9)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/SCHED_USE_MULTICYCLE true
+directive set SCHED_USE_MULTICYCLE true
+/CLOCKS {clk {-CLOCK_PERIOD 15 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 15 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 01 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+/CLOCKS {clk {-CLOCK_PERIOD 01 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 01 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 0.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'six_step.v2' (SOL-8)
+go allocate
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/sixstep/sixstep_reloop/six_step.v2/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'six_step.v2' at state 'libraries' (PRJ-2)
+# Info: Design complexity at end of 'assembly': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'six_step.v1': elapsed time 0.38 seconds, memory usage 1445792kB, peak memory usage 1445792kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 15 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 15 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'six_step.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 2388, Real ops = 826, Vars = 687 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'six_step.v3': elapsed time 6.46 seconds, memory usage 1445848kB, peak memory usage 1511904kB (SOL-9)
+/six_step/core/S2_OUTER_LOOP:for/PIPELINE_INIT_INTERVAL 3
+directive set /six_step/core/S2_OUTER_LOOP:for -PIPELINE_INIT_INTERVAL 3
+/six_step/core/S2_OUTER_LOOP:for:for/UNROLL yes
+directive set /six_step/core/S2_OUTER_LOOP:for:for -UNROLL yes
+/six_step/core/yy:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+directive set /six_step/core/yy:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_DPRAM_RBW_DUAL
+/six_step/core/S1_OUTER_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /six_step/core/S1_OUTER_LOOP -PIPELINE_INIT_INTERVAL 2
+/six_step/core/S5_OUTER_LOOP:for/PIPELINE_INIT_INTERVAL 3
+directive set /six_step/core/S5_OUTER_LOOP:for -PIPELINE_INIT_INTERVAL 3
+/six_step/core/S5_OUTER_LOOP:for:for/UNROLL yes
+directive set /six_step/core/S5_OUTER_LOOP:for:for -UNROLL yes
+/six_step/core/S2_COPY_LOOP/PIPELINE_INIT_INTERVAL 1
+directive set /six_step/core/S2_COPY_LOOP -PIPELINE_INIT_INTERVAL 1
+/six_step/core/S34_OUTER_LOOP/PIPELINE_INIT_INTERVAL 3
+directive set /six_step/core/S34_OUTER_LOOP -PIPELINE_INIT_INTERVAL 3
+# Info: Starting transformation 'loops' on solution 'six_step.v3' (SOL-8)
+go architect
+Loop '/six_step/core/S1_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S1_OUTER_LOOP:for' is left rolled. (LOOP-4)
+/six_step/core/S5_COPY_LOOP/PIPELINE_INIT_INTERVAL 1
+directive set /six_step/core/S5_COPY_LOOP -PIPELINE_INIT_INTERVAL 1
+/six_step/core/S6_OUTER_LOOP/PIPELINE_INIT_INTERVAL 2
+directive set /six_step/core/S6_OUTER_LOOP -PIPELINE_INIT_INTERVAL 2
+Loop '/six_step/core/S5_OUTER_LOOP:for:for' is being fully unrolled (32 times). (LOOP-7)
+Loop '/six_step/core/S34_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_COPY_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_COPY_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP:for:for' is being fully unrolled (32 times). (LOOP-7)
+Loop '/six_step/core/S34_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/main' is left rolled. (LOOP-4)
+Loop '/six_step/core/S6_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S6_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/sixstep/sixstep_reloop/six_step.v3/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'six_step.v3' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+/six_step/revArr:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW
+directive set /six_step/revArr:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW
+/six_step/tw:rsc/BLOCK_SIZE 32
+directive set /six_step/tw:rsc -BLOCK_SIZE 32
+/six_step/x:rsc/BLOCK_SIZE 32
+/six_step/x:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+directive set /six_step/x:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+/six_step/core/xx:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+directive set /six_step/core/xx:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW_DUAL
+/six_step/core/yy:rsc/BLOCK_SIZE 32
+directive set /six_step/core/yy:rsc -BLOCK_SIZE 32
+/six_step/tw:rsc/MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW
+directive set /six_step/tw:rsc -MAP_TO_MODULE Xilinx_RAMS.BLOCK_2R1W_RBW
+/six_step/core/xx:rsc/BLOCK_SIZE 32
+directive set /six_step/core/xx:rsc -BLOCK_SIZE 32
+# Info: Design complexity at end of 'loops': Total ops = 304, Real ops = 84, Vars = 77 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'six_step.v2': elapsed time 0.10 seconds, memory usage 1445848kB, peak memory usage 1511904kB (SOL-9)
+Loop '/six_step/core/S1_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_COPY_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S6_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S34_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S34_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP:for:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/main' is left rolled. (LOOP-4)
+Loop '/six_step/core/S6_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_COPY_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S1_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'six_step.v2' (SOL-8)
+Loop '/six_step/core/S2_OUTER_LOOP:for:for' is left rolled. (LOOP-4)

@@ -1,0 +1,280 @@
+==============================================================================
+[333] Catapult 10.5c/896140 - Tue Sep 14 12:37:17 2021
+------------------------------------------------------------------------------
+[New LWP 17320]
+[New LWP 17321]
+[New LWP 17322]
+[New LWP 17404]
+[New LWP 17406]
+[New LWP 19918]
+[New LWP 19919]
+[New LWP 19935]
+[New LWP 19936]
+[New LWP 20965]
+[New LWP 20966]
+[New LWP 21165]
+[New LWP 21753]
+[New LWP 21789]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+
+Thread 15 (Thread 0x7f02461cc700 (LWP 21789)):
+#0  0x00007f02794bcde2 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x000000000046d158 in CPU_Time::memusage_monitor::monitor(void*) ()
+#2  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#3  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 14 (Thread 0x7f02469cd700 (LWP 21753)):
+#0  0x00007f02794bcde2 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2da41 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 13 (Thread 0x7f02471ce700 (LWP 21165)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a13402 in TTclThread::Event::SendEvent (this=0x7f022c01f420, handler=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1003
+#4  0x00007f0279f1545d in TimerHandlerEventProc () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#5  0x00007f0279ef736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#6  0x00007f0279ef75b5 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#7  0x0000000000a13402 in TTclThread::Event::SendEvent (this=0x7f022c01f3b0, handler=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1003
+#8  0x00007f0279f1545d in TimerHandlerEventProc () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#9  0x00007f0279ef736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#10 0x00007f0279ef7679 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#11 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#12 0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#13 0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 12 (Thread 0x7f02479cf700 (LWP 20966)):
+#0  0x00007f02794bcde2 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2da41 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 11 (Thread 0x7f0269ffe700 (LWP 20965)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 10 (Thread 0x7f0260dbc700 (LWP 19936)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a13402 in TTclThread::Event::SendEvent (this=0x7f0260db9860, handler=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1003
+#4  0x0000000000a19430 in TTclThread::Event::SendEvent (this=0x7f0260db9860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:954
+#5  TTclThread::Handler::EventEval::EventEval (resultInfo=<optimized out>, record=true, str=0x7f025c347a60, interp=<optimized out>, handler=<optimized out>, this=0x7f0260db9860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1621
+#6  TTclThread::Handler::Eval (interp=<optimized out>, script=0x7f025c347a60, record=<optimized out>, resultInfo=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:2143
+#7  0x0000000000a1998f in TTclThread::Eval (resultInfo=<optimized out>, record=<optimized out>, command=<optimized out>, interp=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:2687
+#8  TTclThread::Command::Eval (clientData=0x7f024c0dd58c, clientData@entry=0x0, interp=0x7f024001bbb0, objc=6, objv=0x7f0240b6b138) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:3071
+#9  0x0000000000a19bb8 in TTclThread::InterpObjCmd (clientData=0x0, interp=0x7f024001bbb0, objc=6, objv=0x7f0240b6b138) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:3131
+#10 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#11 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#12 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#13 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#14 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#15 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#16 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#17 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#18 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#19 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#20 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#21 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#22 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#23 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#24 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#25 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#26 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#27 0x00007f0279ecdc97 in TclCompEvalObj () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#28 0x00007f0279e83846 in TclEvalObjEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#29 0x00007f02694fe21f in ButtonWidgetObjCmd () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtk8.5t.so
+#30 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#31 0x00007f0279e81d62 in Tcl_EvalObjv () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#32 0x00007f0279e83af2 in TclEvalObjEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#33 0x00007f0279f06ddf in Tcl_UplevelObjCmd () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#34 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#35 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#36 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#37 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#38 0x00007f0279e8318c in TclEvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#39 0x00007f0279e83793 in Tcl_EvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#40 0x00007f02694d60e8 in Tk_BindEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtk8.5t.so
+#41 0x00007f02694d85d6 in TkBindEventProc () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtk8.5t.so
+#42 0x00007f02694dfff3 in Tk_HandleEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtk8.5t.so
+#43 0x00007f02694e01e4 in WindowEventProc () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home/lib/libtk8.5t.so
+#44 0x00007f0279ef736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#45 0x00007f0279ef75b5 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#46 0x00007f0279ec3702 in Tcl_VwaitObjCmd () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#47 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#48 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#49 0x00007f0279f07699 in TclObjInterpProcCore () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#50 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#51 0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#52 0x00007f0279ecdc97 in TclCompEvalObj () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#53 0x00007f0279e83846 in TclEvalObjEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#54 0x000000000096b0a9 in TUC_Startup::RunInteractiveCommand::EventGuiNotifyInteractive::Process() ()
+#55 0x0000000000a12b63 in TTclThread::Event::EventProc (evPtr=<optimized out>, flags=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1026
+#56 0x00007f0279ef736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#57 0x00007f0279ef7679 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#58 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#59 0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#60 0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7f02615bd700 (LWP 19935)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a13402 in TTclThread::Event::SendEvent (this=0x7f02615bc9a0, handler=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1003
+#4  0x0000000000a1d2c7 in TTclThread::Event::SendEvent (this=0x7f02615bc9a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:954
+#5  TTclThread::Handler::EventEval::EventEval (resultInfo=0x7f02615bc970, record=false, str=0x7f024c12c290, interp=<optimized out>, handler=<optimized out>, this=0x7f02615bc9a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1621
+#6  TTclThread::Handler::MapCommandObjCmd::tclCommand (clientData=<optimized out>, interp=0x7f02643bdd60, objc=<optimized out>, objv=0x7f024c02e5c8) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:2385
+#7  0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#8  0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#9  0x00007f0279ecdc97 in TclCompEvalObj () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#10 0x00007f0279e83846 in TclEvalObjEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#11 0x00007f0279ed3793 in Tcl_RecordAndEvalObj () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#12 0x00007f0279ed37e7 in Tcl_RecordAndEval () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#13 0x0000000000a1e4b7 in TTclThread::Handler::EventEval::Process (this=0x7f0260db9860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1593
+#14 0x0000000000a12b63 in TTclThread::Event::EventProc (evPtr=<optimized out>, flags=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1026
+#15 0x00007f0279ef736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#16 0x00007f0279ef7679 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#17 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#18 0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#19 0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7f0261dbe700 (LWP 19919)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f02625bf700 (LWP 19918)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f0262fcc700 (LWP 17406)):
+#0  0x00007f02794bcde2 in pthread_cond_timedwait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000008c0466 in _ZNXxBsPEL9::_ZNSUNRwcNN::_ZNvwBgn1Ym::_ZNNJWiTUHi (this=0x3808790, timeout_secs=<optimized out>, timeout_ms=0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/aol/Mgc_home/shared/include/cds_clip/CLIM.cpp:1225
+#2  0x00000000008de34f in _ZN2yRWFAqu::_ZNdpSk8gMp::_ZNf8hTjKBg::_ZN88yK9l5Y(_ZNXxBsPEL9::_ZNSUNRwcNN::_ZNvwBgn1Ym&, bool&) ()
+#3  0x00000000008de5c2 in _ZN2yRWFAqu::_ZNdpSk8gMp::InitW(void*) ()
+#4  0x00000000008d4fb3 in _ZNXxBsPEL9::_ZNSUNRwcNN::_ZN8gPozogJ::rinit(void*) ()
+#5  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f02637cd700 (LWP 17404)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f026bfff700 (LWP 17322)):
+#0  0x000000000182797c in Cudd_RecursiveDeref ()
+#1  0x000000000066ad6d in SIF_Bdd2::~SIF_Bdd2 (this=0x7f026bffcc30, __in_chrg=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/bdd/sif_bdd.cxx:1263
+#2  0x00000000010bebc1 in SIF_ValuesOpera2::apply (vec=false, arg2=..., idx=0, trg=0x7f00eceb4718, this=<synthetic pointer>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_values.cxx:200
+#3  SIF_Values::evaluate (this=this@entry=0x7f00eceb4718, op2=..., idx=idx@entry=0, vslc=...) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/classes/sif_values.cxx:448
+#4  0x00000000007308f0 in CD_SeqVal::merge (trINC=0x0, dc0=0x0, iterdc=..., val=..., this=0x7f00eceb4718) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:1020
+#5  CD_SeqStat::merge (this=0x7f01039e3bb0, src=0x7f010358e3f0, subloop=subloop@entry=false) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:1261
+#6  0x00000000007309e7 in CD_SeqProp::fork_branch (this=0x7f026bffd590, fd=0x7f00fe123970) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3206
+#7  0x0000000000718260 in CD_Seq::op_opers (trav=CD_Seq::trav_parallel, ops=0xb8, parent=0x0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:125
+#8  CD_Seq::op_coll (trav=CD_Seq::trav_parallel, coll=0x0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:169
+#9  CD_Seq::op_sel (this=this@entry=0x7f026bffd590, sel=sel@entry=0x7f0103082e30) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:180
+#10 0x000000000073800b in CD_SeqProp::op_sel (this=0x7f026bffd590, sel=0x7f0103082e30) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3110
+#11 0x0000000000719a10 in SIF_Select::cd_seq (this=0x7f0103082e30, seq=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:281
+#12 0x0000000000719757 in CD_Seq::op_opers (trav=CD_Seq::trav_seq, ops=0x7f0102fe6488, parent=0x7f0102fe63d0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:116
+#13 CD_Seq::op_coll (trav=CD_Seq::trav_seq, coll=0x7f0102fe63d0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:169
+#14 CD_Seq::op_list (list=0x7f0102fe63d0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:179
+#15 SIF_List::cd_seq (this=0x7f0102fe63d0, seq=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:280
+#16 0x00000000007398bd in CD_SeqProp::op_cxtrf (this=0x7f026bffd590, cxtrf=0x7f0102a23e10) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3170
+#17 0x00000000007181ea in CD_Seq::op_opers (trav=CD_Seq::trav_parallel, ops=0xb8, parent=0x0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:127
+#18 CD_Seq::op_coll (trav=CD_Seq::trav_parallel, coll=0x0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:169
+#19 CD_Seq::op_sel (this=this@entry=0x7f026bffd590, sel=sel@entry=0x7f01036702d0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:180
+#20 0x000000000073800b in CD_SeqProp::op_sel (this=0x7f026bffd590, sel=0x7f01036702d0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3110
+#21 0x0000000000719a10 in SIF_Select::cd_seq (this=0x7f01036702d0, seq=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:281
+#22 0x0000000000719757 in CD_Seq::op_opers (trav=CD_Seq::trav_seq, ops=0x7f00fdaf2818, parent=0x7f00fdaf2760, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:116
+#23 CD_Seq::op_coll (trav=CD_Seq::trav_seq, coll=0x7f00fdaf2760, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:169
+#24 CD_Seq::op_list (list=0x7f00fdaf2760, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:179
+#25 SIF_List::cd_seq (this=0x7f00fdaf2760, seq=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:280
+#26 0x000000000073613a in CD_SeqProp::sp_loop (this=this@entry=0x7f026bffd590, body=body@entry=0x7f00fdaf2760) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:2708
+#27 0x00000000007381f3 in CD_SeqProp::op_loop (this=0x7f026bffd590, loop=0x7f00fcb5f3e0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3338
+#28 0x0000000000719757 in CD_Seq::op_opers (trav=CD_Seq::trav_seq, ops=0x7f01029f1f58, parent=0x7f01029f1ea0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:116
+#29 CD_Seq::op_coll (trav=CD_Seq::trav_seq, coll=0x7f01029f1ea0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:169
+#30 CD_Seq::op_list (list=0x7f01029f1ea0, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:179
+#31 SIF_List::cd_seq (this=0x7f01029f1ea0, seq=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:280
+#32 0x000000000073613a in CD_SeqProp::sp_loop (this=this@entry=0x7f026bffd590, body=body@entry=0x7f01029f1ea0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:2708
+#33 0x00000000007381f3 in CD_SeqProp::op_loop (this=0x7f026bffd590, loop=0x7f00fd8f0600) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3338
+#34 0x0000000000719757 in CD_Seq::op_opers (trav=CD_Seq::trav_seq, ops=0x7f0107b0e038, parent=0x7f0107b0df80, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:116
+#35 CD_Seq::op_coll (trav=CD_Seq::trav_seq, coll=0x7f0107b0df80, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:169
+#36 CD_Seq::op_list (list=0x7f0107b0df80, this=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:179
+#37 SIF_List::cd_seq (this=0x7f0107b0df80, seq=0x7f026bffd590) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seq.cxx:280
+#38 0x000000000073613a in CD_SeqProp::sp_loop (this=this@entry=0x7f026bffd590, body=body@entry=0x7f0107b0df80) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:2708
+#39 0x00000000007381f3 in CD_SeqProp::op_loop (this=0x7f026bffd590, loop=0x7f00fe8a5c50) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:3338
+#40 0x000000000073613a in CD_SeqProp::sp_loop (this=this@entry=0x7f026bffd590, body=0x7f00fe8a5c50) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:2708
+#41 0x0000000000736683 in SIF_Sequential::cd_seqprop (this=this@entry=0x7f00fe8a5730) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_seqprop.cxx:4015
+#42 0x00000000006d3c32 in SIF_Sequential::cd_opt_part (this=0x7f00fe8a5730, opt=0x7f026bffda90) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_constprop.cxx:5195
+#43 0x00000000006c770c in CD_Optimize::optimize (this=this@entry=0x7f026bffda90, hpart=hpart@entry=0x7f0107ff19a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_constprop.cxx:5126
+#44 0x00000000006d4233 in SIF_HierarchicalPartition::cd_opt_part (this=0x7f0107ff19a0, opt=0x7f026bffda90) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_constprop.cxx:5257
+#45 0x00000000006d201f in SIF_Partition::cd_optimize (fcnt=0, flags=<synthetic pointer>, this=0x7f0107ff19a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_constprop.cxx:5295
+#46 SIF_Partition::cd_optimize (this=this@entry=0x7f0107ff19a0, flags=<optimized out>, flags@entry=0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/cdfg/sif_cd_constprop.cxx:5324
+#47 0x0000000000c4e52a in SIF_CnsCollResult::apply (this=this@entry=0x7f026bffdc80) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ifsyn/sif_if_apply.cxx:2793
+#48 0x0000000000c76968 in memory_allocation_cmd (interp=0x7f026402fc00, solution=0x7f010756ee20) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ifsyn/sif_tcl_mem_alloc.cxx:1855
+#49 0x00000000008a582b in (anonymous namespace)::ise_go_transform (stateSetCWD=..., solution=@0x7f026bffe9b8: 0x7f010756ee20, cmd=..., lres=...) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2089
+#50 TUC_Go::ise_go (interp=interp@entry=0x7f026402fc00, cmd=..., solution=@0x7f026bffe9b8: 0x7f010756ee20, state=state@entry=SDS::Sallocate) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2261
+#51 0x00000000008a7c4c in TUC_Go::TclCommand::Command (this=<optimized out>, objcIdx=<optimized out>, clientData=<optimized out>, interp=0x7f026402fc00, objc=<optimized out>, objv=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_xform_cmds.cxx:2441
+#52 0x000000000085c4b5 in SIF_TclCommand::Process (objv=0x7f026403e860, objc=2, interp=0x7f026402fc00, clientData=0x0, objcIdx=1, this=0x7f0264244c30) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.cxx:271
+#53 SIF_TclTopCommand::tclCommand (clientData=<optimized out>, interp=0x7f026402fc00, objc=2, objv=0x7f026403e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.h:255
+#54 0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#55 0x00007f0279e8318c in TclEvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#56 0x00007f0279e83793 in Tcl_EvalEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#57 0x0000000000a1e41d in TTclThread::Handler::EventEval::Process (this=0x7f02615bc9a0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1595
+#58 0x0000000000a12b63 in TTclThread::Event::EventProc (evPtr=<optimized out>, flags=<optimized out>) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:1026
+#59 0x00007f0279ef736f in Tcl_ServiceEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#60 0x00007f0279ef75b5 in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#61 0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x7f026c03e860) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#62 0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#63 0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f0270d2c700 (LWP 17321)):
+#0  0x00007f02789a09a3 in select () from /lib64/libc.so.6
+#1  0x00007f0279f2ce78 in NotifierThreadProc () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#3  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f027152d700 (LWP 17320)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2dce7 in Tcl_WaitForEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x00007f0279ef763c in Tcl_DoOneEvent () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#3  0x0000000000a1b242 in TTclThread::Handler::ThreadMain (clientData=0x38a8ca0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:698
+#4  0x00007f02794b8ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f02789a996d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f027bc98740 (LWP 17318)):
+#0  0x00007f02794bca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0279f2c45b in Tcl_ConditionWait () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#2  0x0000000000a12fad in TTclThread::TclCondition::Wait (this=0x38a8f90) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/tclthread.cxx:58
+#3  0x000000000096cb1d in TUC_Startup::RunInteractiveCommand::TclCommand::Command(int, void*, Tcl_Interp*, int, Tcl_Obj* const*) ()
+#4  0x000000000085c4b5 in SIF_TclCommand::Process (objv=0x38277d8, objc=1, interp=0x381a0b0, clientData=0x0, objcIdx=1, this=0x38508e0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.cxx:271
+#5  SIF_TclTopCommand::tclCommand (clientData=<optimized out>, interp=0x381a0b0, objc=1, objv=0x38277d8) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/sif_tcl_command.h:255
+#6  0x00007f0279e818a9 in TclEvalObjvInternal () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#7  0x00007f0279ec5576 in TclExecuteByteCode () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#8  0x00007f0279ecdc97 in TclCompEvalObj () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#9  0x00007f0279e83846 in TclEvalObjEx () from /opt/mentorgraphics/Catapult_10.5c/Mgc_home//lib/libtcl8.5t.so
+#10 0x0000000000457f28 in TTclObjI::Eval (this=0x7fff223a4fb0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/aol/Isrc/ise/tclobj.h:601
+#11 StartTcl (envp=0x0, argv=0x7fff223a50e8, argc=1) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/newui_main.cxx:1005
+#12 app_main (argv=0x7fff223a50e8, argc=1, envp=0x0) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/newui_main.cxx:1073
+#13 main (argc=1, argv=0x7fff223a50e8) at /wv/hlsb/CATAPULT/10.5c/2020-09-06_1/src/ise/newui_main.cxx:1092

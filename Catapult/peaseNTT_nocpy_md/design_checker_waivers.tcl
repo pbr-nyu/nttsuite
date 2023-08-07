@@ -1,0 +1,11 @@
+# waive_checks -rule OVL -file ntt.cpp -line 42 -column 12 
+# waive_checks -rule OVL -file ntt.cpp -line 114 -column 15 
+# waive_checks -rule OVL -file ntt.cpp -line 89 -column 22 
+# waive_checks -rule OVL -file ntt.cpp -line 140 -column 15 
+# waive_checks -rule OVL -file ntt.cpp -line 44 -column 12 
+# waive_checks -rule OVL -file ntt.cpp -line 66 -column 43 
+# waive_checks -rule OVL -file ntt.cpp -line 65 -column 27 
+# waive_checks -rule OVL -file ntt.cpp -line 41 -column 12 
+# waive_checks -rule OVL -file ntt.cpp -line 76 -column 43 
+# waive_checks -rule OVL -file ntt.cpp -line 43 -column 12 
+# waive_checks -rule OVL -file ntt.cpp -line 162 -column 15 

@@ -1,0 +1,162 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.15 seconds, memory usage 1445228kB, peak memory usage 1445228kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt.cpp
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+solution file add ./src/ntt_tb.cpp -exclude true
+go compile
+/INPUTFILES/1
+/INPUTFILES/2
+option set Input/TargetPlatform x86_64
+Pragma 'hls_design<top>' detected on routine 'six_step' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/sixstep/catapult.log"
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+c++11
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/sixstep/src/ntt.cpp (CIN-69)
+
+# Messages from "go compile"
+
+# Info: Design complexity at end of 'compile': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'compile' on solution 'six_step.v1': elapsed time 3.92 seconds, memory usage 1445228kB, peak memory usage 1445228kB (SOL-9)
+Synthesizing routine 'six_step' (CIN-13)
+Found top design routine 'six_step' specified by directive (CIN-52)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'six_step' (CIN-14)
+Generating synthesis internal form... (CIN-3)
+# Info: Starting transformation 'compile' on solution 'six_step.v1' (SOL-8)
+Inlining routine 'operator*<64, false>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator*<64, false>' (CIN-14)
+Inlining routine 'modulo_dev' (CIN-14)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+INOUT port 'tw' is only used as an input. (OPT-10)
+Optimizing block '/six_step' ... (CIN-4)
+Inlining routine 'operator>=<64, true>' (CIN-14)
+INOUT port 'revArr' is only used as an input. (OPT-10)
+INOUT port 'twiddle' is only used as an input. (OPT-10)
+Loop '/six_step/core/S2_OUTER_LOOP' iterated at most 5 times. (LOOP-2)
+Loop '/six_step/core/S2_OUTER_LOOP:for' iterated at most 16 times. (LOOP-2)
+Loop '/six_step/core/S2_COPY_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S2_COPY_LOOP:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S2_OUTER_LOOP:for:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S1_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_COPY_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_COPY_LOOP:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S6_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_OUTER_LOOP:for:for' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S34_OUTER_LOOP' iterated at most 32 times. (LOOP-2)
+Loop '/six_step/core/S5_OUTER_LOOP' iterated at most 5 times. (LOOP-2)
+Loop '/six_step/core/S5_OUTER_LOOP:for' iterated at most 16 times. (LOOP-2)
+Design 'six_step' was read (SOL-1)
+# Info: CDesignChecker Shell script written to '/home/jd4691/NTT_Xilinx/Catapult/sixstep/sixstep_reloop/six_step.v1/CDesignChecker/design_checker.sh'
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+
+# Messages from "go libraries"
+
+# Info: Design complexity at end of 'libraries': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'libraries' on solution 'six_step.v1': elapsed time 1.20 seconds, memory usage 1445748kB, peak memory usage 1445748kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+solution library add mgc_Xilinx-VIRTEX-7-2_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -2 -part xc7vx690tffg1926-2
+go libraries
+solution library add amba
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-2_beh.lib' [mgc_Xilinx-VIRTEX-7-2_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Starting transformation 'libraries' on solution 'six_step.v1' (SOL-8)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+solution library add Xilinx_RAMS
+
+# Messages from "go assembly"
+
+# Info: Design complexity at end of 'assembly': Total ops = 292, Real ops = 84, Vars = 71 (SOL-21)
+# Info: Completed transformation 'assembly' on solution 'six_step.v1': elapsed time 0.38 seconds, memory usage 1445792kB, peak memory usage 1445792kB (SOL-9)
+/CLOCKS {clk {-CLOCK_PERIOD 15 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+directive set -CLOCKS {clk {-CLOCK_PERIOD 15 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 7.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Starting transformation 'assembly' on solution 'six_step.v1' (SOL-8)
+go assembly
+
+# Messages from "go architect"
+
+# Info: Design complexity at end of 'loops': Total ops = 304, Real ops = 84, Vars = 77 (SOL-21)
+# Info: Completed transformation 'loops' on solution 'six_step.v1': elapsed time 0.09 seconds, memory usage 1446368kB, peak memory usage 1446368kB (SOL-9)
+Loop '/six_step/core/S6_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S6_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S34_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/main' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP:for:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S34_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_COPY_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP:for:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S5_COPY_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_COPY_LOOP:for' is left rolled. (LOOP-4)
+Loop '/six_step/core/S2_OUTER_LOOP' is left rolled. (LOOP-4)
+# Info: Starting transformation 'loops' on solution 'six_step.v1' (SOL-8)
+go allocate
+Loop '/six_step/core/S1_OUTER_LOOP' is left rolled. (LOOP-4)
+Loop '/six_step/core/S1_OUTER_LOOP:for' is left rolled. (LOOP-4)
+# Info: Design complexity at end of 'memories': Total ops = 304, Real ops = 84, Vars = 77 (SOL-21)
+# Info: Completed transformation 'memories' on solution 'six_step.v1': elapsed time 1.98 seconds, memory usage 1446368kB, peak memory usage 1511904kB (SOL-9)
+I/O-Port Resource '/six_step/g:rsc' (from var: g) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# Info: Starting transformation 'memories' on solution 'six_step.v1' (SOL-8)
+I/O-Port Resource '/six_step/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+Memory Resource '/six_step/x:rsc' (from var: x) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 64). (MEM-4)
+Memory Resource '/six_step/revArr:rsc' (from var: revArr) mapped to 'amba.ccs_axi4_slave_mem' (size: 32 x 32). (MEM-4)
+Memory Resource '/six_step/core/yy:rsc' (from var: yy) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+Memory Resource '/six_step/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 32 x 64). (MEM-4)
+Memory Resource '/six_step/tw:rsc' (from var: tw) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 64). (MEM-4)
+Memory Resource '/six_step/core/xx:rsc' (from var: xx) mapped to 'Xilinx_RAMS.BLOCK_1R1W_RBW' (size: 1024 x 64). (MEM-4)
+# Info: Design complexity at end of 'cluster': Total ops = 304, Real ops = 84, Vars = 77 (SOL-21)
+# Info: Completed transformation 'cluster' on solution 'six_step.v1': elapsed time 0.10 seconds, memory usage 1446368kB, peak memory usage 1511904kB (SOL-9)
+# Info: Starting transformation 'cluster' on solution 'six_step.v1' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Completed transformation 'architect' on solution 'six_step.v1': elapsed time 1.33 seconds, memory usage 1446368kB, peak memory usage 1511904kB (SOL-9)
+# Warning: Extrapolation detected. Script '/home/jd4691/NTT_Xilinx/Catapult/sixstep/sixstep_reloop/six_step.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Design complexity at end of 'architect': Total ops = 406, Real ops = 90, Vars = 93 (SOL-21)
+Design 'six_step' contains '90' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'six_step.v1' (SOL-8)
+
+# Messages from "go allocate"
+
+# Error: Couldn't find library component for operation 'modulo_dev#7:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#6:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+Netlist written to file 'schedule.gnt' (NET-4)
+# Error: Couldn't find library component for operation 'modulo_dev#1:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#5:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#2:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Warning: Couldn't find library component for operator 'rem(64,1,64,0,64)' - multicycle component prohibited by directive SCHED_USE_MULTICYCLE=false (SIF-4)
+# Error: Couldn't find library component for operation 'modulo_dev#4:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Error: Couldn't find library component for operation 'modulo_dev#3:result:rem' ( rem(64,1,64,0,64) ) - invalid resource constraints. (CRAAS-6)
+# Info: Starting transformation 'allocate' on solution 'six_step.v1' (SOL-8)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/six_step/core' (CRAAS-1)

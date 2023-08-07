@@ -1,0 +1,510 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Sat Aug 14 16:26:12 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log10502cc2bdde6.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+project load /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult.ccs
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/modExp/catapult.log"
+option set Input/CppStandard c++98
+# c++98
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 16:37:48 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 16:37:51 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 16:55:09 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 16:55:12 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 16:55:24 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 16:55:27 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v1'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 17:03:57 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 17:04:00 on Aug 14,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+et sfd [file dirname [info script]]
+solution new -state initial
+solution options defaults
+
+option set Input/TargetPlatform x86_64
+# Error: invalid command name "et"
+set sfd [file dirname [info script]]
+solution new -state initial
+solution options defaults
+
+option set Input/TargetPlatform x86_64
+# Info: Branching solution 'solution.v1' at state 'initial' (PRJ-2)
+# x86_64
+solution file add ./src/modExp_tb.cpp -exclude true
+# /INPUTFILES/1
+solution file add ./src/modExp.cpp
+# /INPUTFILES/2
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Front End called with arguments: -- /home/yl7897/NTT_Xilinx/Catapult/modExp/src/modExp.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# $PROJECT_HOME/src/modExp.cpp(10): Pragma 'hls_design<top>' detected on routine 'modExp' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.87 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'modExp.v2' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/src/modExp.cpp(11): Found top design routine 'modExp' specified by directive (CIN-52)
+# $PROJECT_HOME/src/modExp.cpp(11): Synthesizing routine 'modExp' (CIN-13)
+# $PROJECT_HOME/src/modExp.cpp(11): Inlining routine 'modExp' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator><64, false>' (CIN-14)
+# $PROJECT_HOME/src/modExp.cpp(11): Optimizing block '/modExp' ... (CIN-4)
+# Design 'modExp' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'modExp.v2': elapsed time 1.21 seconds, memory usage 1379808kB, peak memory usage 1379808kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+solution library add mgc_Xilinx-VIRTEX-uplus-3_beh -- -rtlsyntool Precision -manufacturer Xilinx -family VIRTEX-uplus -speed -3 -part xcvu13p-flga2577-3-e
+solution library add Xilinx_RAMS
+directive set DSP_EXTRACTION yes
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+go assembly
+# Info: Starting transformation 'libraries' on solution 'modExp.v2' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Info: Completed transformation 'libraries' on solution 'modExp.v2': elapsed time 0.53 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+# Info: Starting transformation 'assembly' on solution 'modExp.v2' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'modExp.v2': elapsed time 0.05 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 13, Real ops = 7, Vars = 9 (SOL-21)
+go memories
+directive set SCHED_USE_MULTICYCLE true
+
+go extract
+# Info: Starting transformation 'loops' on solution 'modExp.v2' (SOL-8)
+# $PROJECT_HOME/src/modExp.cpp(14): Loop '/modExp/core/while' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/modExp.cpp(11): Loop '/modExp/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'modExp.v2': elapsed time 0.04 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 21, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'modExp.v2' (SOL-8)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/exp:rsc' (from var: exp) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/modExp.cpp(11): I/O-Port Resource '/modExp/result:rsc' (from var: result) mapped to 'mgc_ioport.mgc_inout_prereg_en' (size: 64). (MEM-2)
+# Info: Completed transformation 'memories' on solution 'modExp.v2': elapsed time 0.08 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'modExp.v2' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'modExp.v2': elapsed time 0.03 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 23, Real ops = 7, Vars = 13 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'modExp.v2' (SOL-8)
+# Design 'modExp' contains '10' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'modExp.v2': elapsed time 0.21 seconds, memory usage 1380328kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'modExp.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/src/modExp.cpp(14): Prescheduled LOOP '/modExp/core/while' (26 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/modExp.cpp(11): Prescheduled LOOP '/modExp/core/main' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/modExp.cpp(11): Prescheduled LOOP '/modExp/core/core:rlp' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/modExp.cpp(11): Prescheduled SEQUENTIAL '/modExp/core' (total length 30 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/modExp.cpp(11): Initial schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/src/modExp.cpp(11): Final schedule of SEQUENTIAL '/modExp/core': Latency = 26, Area (Datapath, Register, Total) = 12385.82, 0.00, 12385.82 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'modExp.v2': elapsed time 0.23 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 34, Real ops = 10, Vars = 15 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'modExp.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/modExp/core' (CRAAS-1)
+# Global signal 'base:rsc.dat' added to design 'modExp' for component 'base:rsci' (LIB-3)
+# Global signal 'exp:rsc.dat' added to design 'modExp' for component 'exp:rsci' (LIB-3)
+# Global signal 'm:rsc.dat' added to design 'modExp' for component 'm:rsci' (LIB-3)
+# Global signal 'result:rsc.zin' added to design 'modExp' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.lzout' added to design 'modExp' for component 'result:rsci' (LIB-3)
+# Global signal 'result:rsc.zout' added to design 'modExp' for component 'result:rsci' (LIB-3)
+# Global signal 'base:rsc.triosy.lz' added to design 'modExp' for component 'base:rsc.triosy:obj' (LIB-3)
+# Global signal 'exp:rsc.triosy.lz' added to design 'modExp' for component 'exp:rsc.triosy:obj' (LIB-3)
+# Global signal 'm:rsc.triosy.lz' added to design 'modExp' for component 'm:rsc.triosy:obj' (LIB-3)
+# Global signal 'result:rsc.triosy.lz' added to design 'modExp' for component 'result:rsc.triosy:obj' (LIB-3)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'modExp.v2': elapsed time 1.46 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 498, Real ops = 9, Vars = 58 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'modExp.v2' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Info: Completed transformation 'dpfsm' on solution 'modExp.v2': elapsed time 0.69 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 164, Real ops = 46, Vars = 56 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'modExp.v2' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'modExp.v2': elapsed time 0.62 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 154, Real ops = 38, Vars = 108 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'modExp.v2' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'rtl.vhdl.psr'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'concat_rtl.vhdl.psr'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'rtl.v.psr'
+# Warning: Could not find Precision techlib file '$PRECISION_HOME/pkgs/psr/techlibs/xcvuplus.ini'
+# Warning: No matching part found
+# Warning: Precision does not support retiming for 'VIRTEX-uplus'
+# Synthesis script written to file 'concat_rtl.v.psr'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'modExp.v2': elapsed time 7.83 seconds, memory usage 1380324kB, peak memory usage 1380328kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 150, Real ops = 39, Vars = 56 (SOL-21)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Creating simulation directory 'scverify/rtl_v_msim'
+# mkdir -p scverify/rtl_v_msim
+# ============================================
+# Setting up default modelsim.ini file from '/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini'
+# cat "/opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/../modelsim.ini" >scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/mgc_hls
+# ============================================
+# Mapping logical library 'mgc_hls' to physical path '$SCVLIBS/scverify/rtl_v_msim/mgc_hls'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap mgc_hls \$SCVLIBS/scverify/rtl_v_msim/mgc_hls
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap mgc_hls $SCVLIBS/scverify/rtl_v_msim/mgc_hls 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating physical library 'scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlib scverify/rtl_v_msim/work
+# ============================================
+# Mapping logical library 'work' to physical path '$SCVLIBS/scverify/rtl_v_msim/work'
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vmap work \$SCVLIBS/scverify/rtl_v_msim/work
+# Model Technology ModelSim SE-64 vmap 10.6 Lib Mapping Utility 2016.12 Dec 13 2016
+# vmap work $SCVLIBS/scverify/rtl_v_msim/work 
+# Modifying scverify/rtl_v_msim/modelsim.ini
+# ============================================
+# Creating Questa SIM wave TCL file 'scverify/rtl_v_msim/scverify_msim_wave.tcl' from 'scverify/ccs_wave_signals.dat'
+# /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/tclsh8.5 /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/sif/userware/En_na/flows/app_questasim.flo create_wave_script ./Catapult/modExp.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v2/.dut_inst_info.tcl ./Catapult/modExp.v2/.qwave_signal 
+# app_questasim.flo - Executing command 'create_wave_script ./Catapult/modExp.v2/scverify/ccs_wave_signals.dat scverify/rtl_v_msim/scverify_msim_wave.tcl ./Catapult/modExp.v2/.dut_inst_info.tcl ./Catapult/modExp.v2/.qwave_signal'...
+# Wrote Questa SIM waveform creation script to 'scverify/rtl_v_msim/scverify_msim_wave.tcl'
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:08:41 on Aug 14,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v 
+# -- Compiling module ccs_in_v1
+# 
+# Top level modules:
+# 	ccs_in_v1
+# End time: 17:08:41 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:08:41 on Aug 14,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_inout_prereg_en_v1.v 
+# -- Compiling module mgc_inout_prereg_en_v1
+# 
+# Top level modules:
+# 	mgc_inout_prereg_en_v1
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:08:42 on Aug 14,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v 
+# -- Compiling module mgc_io_sync_v2
+# 
+# Top level modules:
+# 	mgc_io_sync_v2
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:08:42 on Aug 14,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v 
+# -- Compiling module mgc_rem
+# 
+# Top level modules:
+# 	mgc_rem
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work mgc_hls     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:08:42 on Aug 14,2021
+# vlog -work mgc_hls /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v 
+# -- Compiling module mgc_mul_pipe
+# 
+# Top level modules:
+# 	mgc_mul_pipe
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling Verilog file: rtl.v
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vlog -work work     rtl.v
+# Model Technology ModelSim SE-64 vlog 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:08:42 on Aug 14,2021
+# vlog -work work rtl.v 
+# -- Compiling module modExp_core_core_fsm
+# -- Compiling module modExp_core_wait_dp
+# -- Compiling module modExp_core
+# -- Compiling module modExp
+# 
+# Top level modules:
+# 	modExp
+# End time: 17:08:42 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 17:08:42 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/modExp_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 17:08:46 on Aug 14,2021, Elapsed time: 0:00:04
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/modExp_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/modExp_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp_tb.cpp
+# Start time: 17:09:34 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 17:09:39 on Aug 14,2021, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: ../../src/modExp.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/modExp.cpp
+# Start time: 17:09:39 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 17:09:40 on Aug 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 17:09:40 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 17:09:46 on Aug 14,2021, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=modExp -DCCS_DESIGN_FUNC_modExp -DCCS_DESIGN_TOP_modExp -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 17:09:46 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
+#                  from scverify/mc_testbench.h:30,
+#                  from scverify/scverify_top.cpp:4:
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
+# scverify/scverify_top.cpp:170:30:   required from here
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
+#      mutable sc_event* m_posedge_event_p; // positive edge event if present.
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:740:23: warning:   'sc_dt::uint64 sc_core::sc_signal<sc_dt::sc_logic>::m_change_stamp' [-Wreorder]
+#      sc_dt::uint64     m_change_stamp;    // delta of last event
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
+#      sc_signal()
+#      ^
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 17:09:56 on Aug 14,2021, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 17:09:56 on Aug 14,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 17:09:57 on Aug 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/modExp.v2/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 17:09:57 on Aug 14,2021
+# vopt "+acc=npr" -L ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls -L ./Catapult/modExp.v2/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult/modExp.v2/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '10 ns'
+# -- Loading module modExp
+# -- Loading module modExp_core
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_inout_prereg_en_v1
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_rem
+# -- Loading module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_mul_pipe
+# -- Loading module modExp_core_wait_dp
+# -- Loading module modExp_core_core_fsm
+# Optimizing 11 design-units (inlining 0/14 module instances, 0/0 UDP instances):
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_rem(fast)
+# -- Optimizing module modExp_core(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_mul_pipe(fast)
+# -- Optimizing module modExp_core_core_fsm(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_inout_prereg_en_v1(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__2)
+# -- Optimizing module modExp_core_wait_dp(fast)
+# -- Optimizing module ./Catapult/modExp.v2/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# -- Optimizing module modExp(fast)
+# Optimized design name is scverify_top_opt
+# End time: 17:09:57 on Aug 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+project save
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/modExp/Catapult.ccs'. (PRJ-5)

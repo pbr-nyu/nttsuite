@@ -1,0 +1,24 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 3.15 seconds, memory usage 1445228kB, peak memory usage 1445228kB (SOL-9)
+# Warning: last line of file ends without a newline (CRD-1)
+option set Input/CppStandard c++11
+# Warning: last line of file ends without a newline (CRD-1)
+solution file add ./src/ntt.cpp
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+solution file add ./src/ntt_tb.cpp -exclude true
+go compile
+/INPUTFILES/1
+/INPUTFILES/2
+option set Input/TargetPlatform x86_64
+Pragma 'hls_design<top>' detected on routine 'six_step' (CIN-6)
+# Warning: last line of file ends without a newline (CRD-1)
+Source file analysis completed (CIN-68)
+Moving session transcript to file "/home/jd4691/NTT_Xilinx/Catapult/sixstep/catapult.log"
+Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+c++11
+Front End called with arguments: -- /home/jd4691/NTT_Xilinx/Catapult/sixstep/src/ntt.cpp (CIN-69)

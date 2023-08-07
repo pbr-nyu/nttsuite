@@ -1,0 +1,30 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Wed Sep 15 12:01:56 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log25715102b9113.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+project load /home/yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/Catapult_1.ccs
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/catapult.log"
+go assembly
+# Info: Starting transformation 'assembly' on solution 'peaseNTT.v15' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'peaseNTT.v15': elapsed time 2.65 seconds, memory usage 3086696kB, peak memory usage 3086696kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 2455, Real ops = 1105, Vars = 475 (SOL-21)
+# File '$PROJECT_HOME/include/config.h' saved
+quit
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/peaseNTT_nocpy_md/Catapult_1.ccs'. (PRJ-5)
+// Finish time Wed Sep 15 21:16:54 2021, time elapsed 9:14:58, peak memory 2.94GB, exit status 0

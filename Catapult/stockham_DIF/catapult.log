@@ -1,0 +1,1153 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux yl7897@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Wed Aug 18 23:09:47 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log55587302b6df3.0"
+# Loading options from '$HOME/.catapult/10.5c-896140.aol.reg'.
+project load /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult.ccs
+# Moving session transcript to file "/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/catapult.log"
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/td_ccore_solutions/modulo_dev_82693469b209adaad48c4c31f4adead96233_0/.sif/solIndex_2_1f881226-93fe-451a-8f6a-430683e18c7e.xml' ... (LIB-129)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/.sif/solIndex_2_3fe98673-9cb0-4143-9483-0d03b237d875.xml' ... (LIB-129)
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:15:33 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(35): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#     result = modulo(result*base, m);
+#                                   ^
+# Error: ../../src/ntt_tb.cpp(40): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#    base = modulo(base*base,m);
+#                             ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(73): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'size_t {aka long unsigned int}' for argument '1' to 'void* malloc(size_t)'
+#   result = (UINT64_T *) malloc(n*sizeof(UINT64_T));
+#                                                  ^
+# Error: ../../src/ntt_tb.cpp(92): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      factor2 = result[j + k + m/2];
+#                      ^
+# Error: ../../src/ntt_tb.cpp(94): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::plus {aka mti_ac::ac_int<65, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#      result[j + k]   = modulo(factor1 + factor2,p);
+#                                                  ^
+# Error: ../../src/ntt_tb.cpp(95): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo(factor1 - factor2,p),p);
+#            ^
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo(factor1 - factor2,p),p);
+#                                               ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# Error: ../../src/ntt_tb.cpp(95): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::minus {aka mti_ac::ac_int<65, true>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo(factor1 - factor2,p),p);
+#                                                                           ^
+# ../../src/ntt_tb.cpp: In member function 'int testbench::main()':
+# Error: ../../src/ntt_tb.cpp(124): error: 'inPlaceNTT_DIF' was not declared in this scope
+#   CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, output);
+#                                               ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:15:35 on Aug 18,2021, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+# File '$PROJECT_HOME/src/ntt_tb.cpp' saved
+# File '$PROJECT_HOME/src/ntt_tb.cpp' saved
+# File '$PROJECT_HOME/src/ntt_tb.cpp' saved
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:18:45 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(35): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#     result = modulo(result*base, m);
+#                                   ^
+# Error: ../../src/ntt_tb.cpp(40): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#    base = modulo(base*base,m);
+#                             ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(92): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      factor2 = result[j + k + m/2];
+#                      ^
+# Error: ../../src/ntt_tb.cpp(95): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#            ^
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#                                               ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# ../../src/ntt_tb.cpp: In member function 'int testbench::main()':
+# Error: ../../src/ntt_tb.cpp(124): error: 'inPlaceNTT_DIF' was not declared in this scope
+#   CCS_DESIGN(inPlaceNTT_DIF)(vec, p, r, output);
+#                                               ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:18:48 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:35:30 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(35): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#     result = modulo(result*base, m);
+#                                   ^
+# Error: ../../src/ntt_tb.cpp(40): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#    base = modulo(base*base,m);
+#                             ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(92): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      factor2 = result[j + k + m/2];
+#                      ^
+# Error: ../../src/ntt_tb.cpp(95): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#            ^
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[j + k + m/2] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#                                               ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:35:33 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:36:42 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(35): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#     result = modulo(result*base, m);
+#                                   ^
+# Error: ../../src/ntt_tb.cpp(40): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#    base = modulo(base*base,m);
+#                             ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(92): error: no match for 'operator[]' (operand types are 'UINT64_T* {aka mti_ac::ac_int<64, false>*}' and 'mti_ac::ac_int<32, false>::rt<65, true>::plus {aka mti_ac::ac_int<66, true>}')
+#      factor2 = result[j + k + m/2];
+#                      ^
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[(UINT64_T)(j + k + m/2)] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#                                                           ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:36:45 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:37:11 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(35): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#     result = modulo(result*base, m);
+#                                   ^
+# Error: ../../src/ntt_tb.cpp(40): error: cannot convert 'mti_ac::ac_int<64, false>::rt<64, false>::mult {aka mti_ac::ac_int<128, false>}' to 'int64_t {aka long int}' for argument '1' to 'uint64_t modulo(int64_t, int64_t)'
+#    base = modulo(base*base,m);
+#                             ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[(UINT64_T)(j + k + m/2)] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#                                                           ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:37:14 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:38:47 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[(UINT64_T)(j + k + m/2)] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#                                                           ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:38:50 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:39:38 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T modulo(int64_t, int64_t)':
+# Error: ../../src/ntt_tb.cpp(54): error: ambiguating new declaration of 'UINT64_T modulo(int64_t, int64_t)'
+#  UINT64_T modulo(int64_t base, int64_t m){
+#                                         ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:25:10: note: old declaration 'uint64_t modulo(int64_t, int64_t)'
+#  uint64_t modulo(int64_t base, int64_t m);
+#           ^
+# ../../src/ntt_tb.cpp: In function 'UINT64_T* inPlaceNTT_DIF_golden(UINT64_T*, UINT64_T, UINT64_T, UINT64_T)':
+# Error: ../../src/ntt_tb.cpp(95): error: call of overloaded 'modExp(UINT64_T&, unsigned int&, UINT64_T&)' is ambiguous
+#      result[(UINT64_T)(j + k + m/2)] = modulo(modExp(a,k,p)*modulo((UINT64_T)(factor1 - factor2),p),p);
+#                                                           ^
+# In file included from ../../src/ntt_tb.cpp:2:0:
+# ../../src/../include/ntt_tb.h:17:10: note: candidate: uint64_t modExp(uint64_t, uint64_t, uint64_t)
+#  uint64_t modExp(uint64_t base, uint64_t exp, uint64_t m);
+#           ^
+# ../../src/ntt_tb.cpp:27:10: note: candidate: UINT64_T modExp(UINT64_T, UINT64_T, UINT64_T)
+#  UINT64_T modExp(UINT64_T base, UINT64_T exp, UINT64_T m){
+#           ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:39:41 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:41:50 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:41:52 on Aug 18,2021, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:54:36 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/cstdint:35:0,
+#                  from ../../src/../include/ntt_tb.h:2,
+#                  from ../../src/ntt_tb.cpp:2:
+# Error: /opt/mentorgraphics/modelsimSE106/modeltech/gcc-5.3.0-linux_x86_64/include/c++/5.3.0/bits/c++0x_warning.h(32): error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+#  #error This file requires compiler and library support for the \
+#   ^
+# ** Error: (sccom-6142) Compilation failed.
+# End time: 23:54:39 on Aug 18,2021, Elapsed time: 0:00:03
+# Errors: 1, Warnings: 0
+# make: *** [scverify/rtl_v_msim/ntt_tb.cpp.cxxts] Error 11
+flow run /SCVerify/launch_make ./scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui
+# Making './scverify/Verify_rtl_v_msim.mk {} SIMTOOL=msim simgui'
+# Make utility invoked from '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7'
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim build < "/dev/null" (BASIC-15)
+# ============================================
+# Compiling C++ file: ../../src/ntt_tb.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c ../../src/ntt_tb.cpp
+# Start time: 23:54:57 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 23:55:01 on Aug 18,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/mc_testbench.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/mc_testbench.cpp
+# Start time: 23:55:01 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 23:55:07 on Aug 18,2021, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
+# ============================================
+# Compiling C++ file: scverify/scverify_top.cpp
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -g -x c++ -Wall -Wno-unused-label -Wno-unknown-pragmas  -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_RTL -DCCS_DUT_VERILOG -DCCS_SCVERIFY -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DTOP_HDL_ENTITY=DIT_RELOOP -DCCS_DESIGN_FUNC_DIT_RELOOP -DCCS_DESIGN_TOP_DIT_RELOOP -DCCS_MISMATCHED_OUTPUTS_ONLY  -DDEADLOCK_DETECTION -I./scverify -I. -I../.. -I./scverify -I. -I../.. -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs -I/opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DUSE_STD_STRING -DSC_INCLUDE_MTI_AC  -c scverify/scverify_top.cpp
+# Start time: 23:55:07 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# 
+# In file included from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_buffer.h:32:0,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc:82,
+#                  from /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/systemc.h:211,
+#                  from scverify/mc_testbench.h:30,
+#                  from scverify/scverify_top.cpp:4:
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h: In instantiation of 'sc_core::sc_signal<sc_dt::sc_logic, POL>::sc_signal() [with sc_core::sc_writer_policy POL = (sc_core::sc_writer_policy)0u]':
+# scverify/scverify_top.cpp:306:30:   required from here
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:743:23: warning: 'sc_core::sc_signal<sc_dt::sc_logic>::m_posedge_event_p' will be initialized after [-Wreorder]
+#      mutable sc_event* m_posedge_event_p; // positive edge event if present.
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:740:23: warning:   'sc_dt::uint64 sc_core::sc_signal<sc_dt::sc_logic>::m_change_stamp' [-Wreorder]
+#      sc_dt::uint64     m_change_stamp;    // delta of last event
+#                        ^
+# /opt/mentorgraphics/modelsimSE106/modeltech/include/systemc/sc_signal.h:602:5: warning:   when initialized here [-Wreorder]
+#      sc_signal()
+#      ^
+# 
+# Exported modules:
+# 	scverify_top
+# ** Warning: (sccom-6102) The object "_data" is not debuggable. (/opt/mentorgraphics/Catapult_10.5c/Mgc_home/shared/include/mc_monitor.h, 144)
+# End time: 23:55:17 on Aug 18,2021, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 1
+# ============================================
+# Linking executable
+# /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/sccom -link     
+# sccom -link 
+# Start time: 23:55:17 on Aug 18,2021
+# 
+# Model Technology ModelSim SE-64 sccom 10.6 compiler 2016.12 Dec 13 2016
+# End time: 23:55:18 on Aug 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# ============================================
+# Optimizing design: scverify_top
+# cd ../..; /opt/mentorgraphics/modelsimSE106/modeltech/linux_x86_64/vopt +acc=npr     -L "./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls" -L "./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/work"   scverify_top  -o scverify_top_opt
+# Model Technology ModelSim SE-64 vopt 10.6 Compiler 2016.12 Dec 13 2016
+# Start time: 23:55:18 on Aug 18,2021
+# vopt "+acc=npr" -L ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls -L ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/work scverify_top -o scverify_top_opt 
+# 
+# Top level modules:
+# 	scverify_top
+# 
+# Analyzing design...
+# -- Loading shared library /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/work/_sc/linux_x86_64_gcc-5.3.0/systemc.so
+# -- Loading systemc module /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/work.scverify_top
+# Info: CCS_CLK_CTOR: Clock 'clk' - Using default clock period '20 ns'
+# -- Loading module DIT_RELOOP
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_9_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_10_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_11_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_12_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_13_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_14_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_15_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_16_64_8_256_256_64_5_gen
+# -- Loading module DIT_RELOOP_core
+# -- Loading module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1
+# -- Loading module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2
+# -- Loading module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_rem
+# -- Loading module modulo_dev
+# -- Loading module modulo_dev_core
+# -- Loading module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2
+# -- Loading module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_shift_r_v5
+# -- Loading module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5
+# -- Loading module DIT_RELOOP_core_wait_dp
+# -- Loading module DIT_RELOOP_core_core_fsm
+# Optimizing 24 design-units (inlining 0/34 module instances, 0/0 UDP instances):
+# -- Optimizing module DIT_RELOOP_core(fast)
+# -- Optimizing module DIT_RELOOP_core_core_fsm(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_rem(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_rem(fast__1)
+# -- Optimizing module modulo_dev_core(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_shift_l_v5(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_shift_r_v5(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_9_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_10_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_11_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rwport_12_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_13_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_14_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_15_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module DIT_RELOOP_ccs_sample_mem_ccs_ram_sync_1R1W_rport_16_64_8_256_256_64_5_gen(fast)
+# -- Optimizing module modulo_dev(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__1)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__2)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_out_dreg_v2(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.ccs_in_v1(fast__3)
+# -- Optimizing module DIT_RELOOP_core_wait_dp(fast)
+# -- Optimizing module ./Catapult/DIT_RELOOP.v7/scverify/rtl_v_msim/mgc_hls.mgc_io_sync_v2(fast)
+# -- Optimizing module DIT_RELOOP(fast)
+# Optimized design name is scverify_top_opt
+# End time: 23:55:19 on Aug 18,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0, Suppressed Warnings: 2
+#     /opt/mentorgraphics/Catapult_10.5c/Mgc_home/bin/make -f ./scverify/Verify_rtl_v_msim.mk SIMTOOL=msim simgui < "/dev/null" (BASIC-15)
+project save
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult.ccs'. (PRJ-5)
+# Warning: GUI: Resource path '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' not found for Constraint Editor.
+go assembly
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 8
+# CU_DIRECTIVE sid11 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+# CU_DIRECTIVE sid11 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+# CU_DESIGN sid11 ADD {} {VERSION v8 SID sid11 BRANCH_SID sid10 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+# Info: Branching solution 'DIT_RELOOP.v8' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/CDesignChecker/design_checker.sh'
+# /DIT_RELOOP/core/IDX_LOOP/UNROLL 8
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 8
+# /DIT_RELOOP/vec:rsc/INTERLEAVE 8
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 8
+# /DIT_RELOOP/twiddle:rsc/INTERLEAVE 8
+go extract
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v8' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(38): N_UNROLL parameter 8 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# $PROJECT_HOME/src/ntt.cpp(38): Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 8 times. (LOOP-3)
+# $PROJECT_HOME/src/ntt.cpp(37): Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(33): Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v8': elapsed time 1.58 seconds, memory usage 1519512kB, peak memory usage 1519512kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 320, Real ops = 99, Vars = 73 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v8' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(29): Resource '/DIT_RELOOP/vec:rsc' split into 1 x 8 blocks (MEM-11)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(0)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(1)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(2)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(3)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(4)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(5)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(6)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(7)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(29): I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(29): Resource '/DIT_RELOOP/twiddle:rsc' split into 1 x 8 blocks (MEM-11)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 128 x 64). (MEM-4)
+# Info: Merged 'IDX_LOOP:f2:switch' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#1' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#1' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#2' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#2' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#3' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#3' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#4' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#4' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#5' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#5' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#6' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#6' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#7' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#7' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v8': elapsed time 4.91 seconds, memory usage 1519512kB, peak memory usage 1519512kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 1269, Real ops = 99, Vars = 124 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Module 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0' in the cache is valid & accepted for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' (TD-3)
+# Module for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' has been successfully synthesized (TD-4)
+# Info: Completed transformation 'cluster' on solution 'DIT_RELOOP.v8': elapsed time 1.27 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 1257, Real ops = 97, Vars = 115 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Design 'DIT_RELOOP' contains '761' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'DIT_RELOOP.v8': elapsed time 5.21 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 3331, Real ops = 761, Vars = 496 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/src/ntt.cpp(38): Prescheduled LOOP '/DIT_RELOOP/core/IDX_LOOP' (89 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(37): Prescheduled LOOP '/DIT_RELOOP/core/GROUP_LOOP' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(33): Prescheduled LOOP '/DIT_RELOOP/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(29): Prescheduled LOOP '/DIT_RELOOP/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(29): Prescheduled LOOP '/DIT_RELOOP/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(29): Prescheduled SEQUENTIAL '/DIT_RELOOP/core' (total length 117690522 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/ntt.cpp(29): Initial schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 119012767, Area (Datapath, Register, Total) = 487225.10, 8568.00, 495793.10 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/src/ntt.cpp(29): Final schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7898.62, 239118.86 (CRAAS-12)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 20.58 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 47.01 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 76.87 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 98.03 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 119.33 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 140.46 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 170.30 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 200.19 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 221.87 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 242.86 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 264.20 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 293.77 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 323.60 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 344.70 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 365.90 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 386.89 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 416.74 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 437.74 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 458.99 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 480.38 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 509.02 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 538.80 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 559.96 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 581.37 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 602.99 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 632.15 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 661.94 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 682.82 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 704.21 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 725.65 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 755.29 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 785.14 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 806.02 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 826.77 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 848.13 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 877.99 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 899.76 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 921.12 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 942.30 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 341150767, Area (Datapath, Register, Total) = 231220.24, 7987.88, 239208.11 (CRAAS-18)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'DIT_RELOOP.v8': elapsed time 958.09 seconds, memory usage 1511320kB, peak memory usage 1519512kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 3331, Real ops = 761, Vars = 496 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+# Global signal 'p:rsc.dat' added to design 'DIT_RELOOP' for component 'p:rsci' (LIB-3)
+# Global signal 'r:rsc.dat' added to design 'DIT_RELOOP' for component 'r:rsci' (LIB-3)
+# Global signal 'vec:rsc(0)(0).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Global signal 'vec:rsc(0)(0).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Global signal 'vec:rsc(0)(0).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Global signal 'vec:rsc(0)(0).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Global signal 'vec:rsc(0)(0).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Global signal 'vec:rsc(0)(0).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(0)i' (LIB-3)
+# Global signal 'vec:rsc(0)(1).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Global signal 'vec:rsc(0)(1).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Global signal 'vec:rsc(0)(1).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Global signal 'vec:rsc(0)(1).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Global signal 'vec:rsc(0)(1).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Global signal 'vec:rsc(0)(1).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(1)i' (LIB-3)
+# Global signal 'vec:rsc(0)(2).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Global signal 'vec:rsc(0)(2).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Global signal 'vec:rsc(0)(2).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Global signal 'vec:rsc(0)(2).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Global signal 'vec:rsc(0)(2).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Global signal 'vec:rsc(0)(2).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(2)i' (LIB-3)
+# Global signal 'vec:rsc(0)(3).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Global signal 'vec:rsc(0)(3).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Global signal 'vec:rsc(0)(3).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Global signal 'vec:rsc(0)(3).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Global signal 'vec:rsc(0)(3).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Global signal 'vec:rsc(0)(3).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(3)i' (LIB-3)
+# Global signal 'vec:rsc(0)(4).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+# Global signal 'vec:rsc(0)(4).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+# Global signal 'vec:rsc(0)(4).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+# Global signal 'vec:rsc(0)(4).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+# Global signal 'vec:rsc(0)(4).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+# Global signal 'vec:rsc(0)(4).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(4)i' (LIB-3)
+# Global signal 'vec:rsc(0)(5).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Global signal 'vec:rsc(0)(5).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Global signal 'vec:rsc(0)(5).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Global signal 'vec:rsc(0)(5).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Global signal 'vec:rsc(0)(5).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Global signal 'vec:rsc(0)(5).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(5)i' (LIB-3)
+# Global signal 'vec:rsc(0)(6).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Global signal 'vec:rsc(0)(6).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Global signal 'vec:rsc(0)(6).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Global signal 'vec:rsc(0)(6).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Global signal 'vec:rsc(0)(6).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Global signal 'vec:rsc(0)(6).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(6)i' (LIB-3)
+# Global signal 'vec:rsc(0)(7).we' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Global signal 'vec:rsc(0)(7).d' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Global signal 'vec:rsc(0)(7).wadr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Global signal 'vec:rsc(0)(7).q' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Global signal 'vec:rsc(0)(7).re' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Global signal 'vec:rsc(0)(7).radr' added to design 'DIT_RELOOP' for component 'vec:rsc(0)(7)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(0).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(0).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(0).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(0)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(1).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(1).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(1).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(1)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(2).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(2).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(2).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(2)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(3).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(3).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(3).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(3)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(4).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(4).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(4).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(4)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(5).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(5).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(5).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(5)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(6).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(6).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(6).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(6)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(7).q' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(7).re' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+# Global signal 'twiddle:rsc(0)(7).radr' added to design 'DIT_RELOOP' for component 'twiddle:rsc(0)(7)i' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(7).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(7):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(6).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(6):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(5).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(5):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(4).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(4):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(3).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(3):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(2).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(2):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(1).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(1):obj' (LIB-3)
+# Global signal 'vec:rsc.triosy(0)(0).lz' added to design 'DIT_RELOOP' for component 'vec:rsc.triosy(0)(0):obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'r:rsc.triosy.lz' added to design 'DIT_RELOOP' for component 'r:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(7).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(7):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(6).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(6):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(5).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(5):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(4).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(4):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(3).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(3):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(2).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(2):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(1).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(1):obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy(0)(0).lz' added to design 'DIT_RELOOP' for component 'twiddle:rsc.triosy(0)(0):obj' (LIB-3)
+# Info: Running transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 21.65 seconds, memory usage 1576856kB, peak memory usage 1576856kB (SOL-15)
+# Info: Running transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 43.60 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-15)
+# Warning: $PROJECT_HOME/src/ntt.cpp(29): Input port 'r:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Running transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 73.39 seconds, memory usage 1576856kB, peak memory usage 1642392kB (SOL-15)
+# Info: Completed transformation 'schedule' on solution 'DIT_RELOOP.v8': elapsed time 77.10 seconds, memory usage 1576856kB, peak memory usage 1642392kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 33336, Real ops = 632, Vars = 987 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'IDX_LOOP-1:lshift.idiv.sva' for variables 'IDX_LOOP-1:lshift.idiv.sva, IDX_LOOP-2:lshift.idiv.sva, IDX_LOOP-3:lshift.idiv.sva, IDX_LOOP-4:lshift.idiv.sva, IDX_LOOP-5:lshift.idiv.sva, IDX_LOOP-6:lshift.idiv.sva, IDX_LOOP-7:lshift.idiv.sva, IDX_LOOP-8:lshift.idiv.sva' (7 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP-1:mul.mut' for variables 'IDX_LOOP-1:mul.mut, IDX_LOOP-2:mul.mut, IDX_LOOP-3:mul.mut, IDX_LOOP-4:mul.mut, IDX_LOOP-5:mul.mut, IDX_LOOP-6:mul.mut, IDX_LOOP-7:mul.mut, IDX_LOOP-8:mul.mut' (7 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP:IDX_LOOP:and#104.itm' for variables 'IDX_LOOP:IDX_LOOP:and#104.itm, IDX_LOOP:IDX_LOOP:and#121.itm, IDX_LOOP:IDX_LOOP:and#19.itm, IDX_LOOP:IDX_LOOP:and#2.itm, IDX_LOOP:IDX_LOOP:and#36.itm, IDX_LOOP:IDX_LOOP:and#53.itm, IDX_LOOP:IDX_LOOP:and#70.itm, IDX_LOOP:IDX_LOOP:and#87.itm, IDX_LOOP:f2:IDX_LOOP:f2:and#215.itm' (8 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP:IDX_LOOP:and#106.itm' for variables 'IDX_LOOP:IDX_LOOP:and#106.itm, IDX_LOOP:IDX_LOOP:and#123.itm, IDX_LOOP:IDX_LOOP:and#21.itm, IDX_LOOP:IDX_LOOP:and#38.itm, IDX_LOOP:IDX_LOOP:and#4.itm, IDX_LOOP:IDX_LOOP:and#55.itm, IDX_LOOP:IDX_LOOP:and#72.itm, IDX_LOOP:IDX_LOOP:and#89.itm' (7 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP:IDX_LOOP:and#107.itm' for variables 'IDX_LOOP:IDX_LOOP:and#107.itm, IDX_LOOP:IDX_LOOP:and#124.itm, IDX_LOOP:IDX_LOOP:and#22.itm, IDX_LOOP:IDX_LOOP:and#39.itm, IDX_LOOP:IDX_LOOP:and#5.itm, IDX_LOOP:IDX_LOOP:and#56.itm, IDX_LOOP:IDX_LOOP:and#73.itm, IDX_LOOP:IDX_LOOP:and#90.itm' (7 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP:IDX_LOOP:and#108.itm' for variables 'IDX_LOOP:IDX_LOOP:and#108.itm, IDX_LOOP:IDX_LOOP:and#125.itm, IDX_LOOP:IDX_LOOP:and#23.itm, IDX_LOOP:IDX_LOOP:and#40.itm, IDX_LOOP:IDX_LOOP:and#57.itm, IDX_LOOP:IDX_LOOP:and#6.itm, IDX_LOOP:IDX_LOOP:and#74.itm, IDX_LOOP:IDX_LOOP:and#91.itm' (7 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP:IDX_LOOP:nor#12.itm' for variables 'IDX_LOOP:IDX_LOOP:nor#12.itm, IDX_LOOP:IDX_LOOP:nor#15.itm, IDX_LOOP:IDX_LOOP:nor#18.itm, IDX_LOOP:IDX_LOOP:nor#21.itm, IDX_LOOP:IDX_LOOP:nor#3.itm, IDX_LOOP:IDX_LOOP:nor#6.itm, IDX_LOOP:IDX_LOOP:nor#9.itm, IDX_LOOP:IDX_LOOP:nor.itm' (7 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#15' for variables 'tmp#11.sva#15, tmp#15.sva#15, tmp#3.sva#15, tmp#7.sva#15, tmp#13.sva#14, tmp#5.sva#14, tmp#9.sva#14' (6 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#17' for variables 'tmp#11.sva#17, tmp#15.sva#17, tmp#3.sva#17, tmp#7.sva#17, tmp#13.sva#16, tmp#5.sva#16, tmp#9.sva#16' (6 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#19' for variables 'tmp#11.sva#19, tmp#15.sva#19, tmp#3.sva#19, tmp#7.sva#19, tmp#13.sva#2, tmp#5.sva#2, tmp#9.sva#2, tmp#13.sva#28, tmp#5.sva#28, tmp#9.sva#28' (9 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#23' for variables 'tmp#11.sva#23, tmp#15.sva#23, tmp#3.sva#23, tmp#7.sva#23, tmp#13.sva#22, tmp#5.sva#22, tmp#9.sva#22' (6 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#25' for variables 'tmp#11.sva#25, tmp#15.sva#25, tmp#3.sva#25, tmp#7.sva#25, tmp#13.sva#24, tmp#5.sva#24, tmp#9.sva#24' (6 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#27' for variables 'tmp#11.sva#27, tmp#15.sva#27, tmp#3.sva#27, tmp#7.sva#27, tmp#13.sva#26, tmp#5.sva#26, tmp#9.sva#26, tmp#13.sva#4, tmp#5.sva#4, tmp#9.sva#4' (9 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#29' for variables 'tmp#11.sva#29, tmp#15.sva#29, tmp#3.sva#29, tmp#7.sva#29, tmp#13.sva#6, tmp#5.sva#6, tmp#9.sva#6' (6 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#3' for variables 'tmp#11.sva#3, tmp#15.sva#3, tmp#3.sva#3, tmp#7.sva#3, tmp#13.sva#8, tmp#5.sva#8, tmp#9.sva#8' (6 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#5' for variables 'tmp#11.sva#5, tmp#15.sva#5, tmp#3.sva#5, tmp#7.sva#5' (3 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#7' for variables 'tmp#11.sva#7, tmp#15.sva#7, tmp#3.sva#7, tmp#7.sva#7' (3 registers deleted). (FSM-3)
+# Creating shared register 'tmp#11.sva#9' for variables 'tmp#11.sva#9, tmp#15.sva#9, tmp#3.sva#9, tmp#7.sva#9' (3 registers deleted). (FSM-3)
+# Creating shared register 'tmp#10.lpi#4.dfm' for variables 'tmp#10.lpi#4.dfm, tmp#12.lpi#4.dfm, tmp#14.lpi#4.dfm, tmp#2.lpi#4.dfm, tmp#4.lpi#4.dfm, tmp#6.lpi#4.dfm, tmp#8.lpi#4.dfm, tmp.lpi#4.dfm' (7 registers deleted). (FSM-3)
+# Creating shared register 'IDX_LOOP:modulo_dev(return)#1.sva' for variables 'IDX_LOOP:modulo_dev(return)#1.sva, IDX_LOOP:modulo_dev(return)#10.sva, IDX_LOOP:modulo_dev(return)#11.sva, IDX_LOOP:modulo_dev(return)#12.sva, IDX_LOOP:modulo_dev(return)#13.sva, IDX_LOOP:modulo_dev(return)#14.sva, IDX_LOOP:modulo_dev(return)#15.sva, IDX_LOOP:modulo_dev(return)#9.sva, tmp#1.lpi#4.dfm#4, tmp#11.lpi#4.dfm#4, tmp#13.lpi#4.dfm#4, tmp#15.lpi#4.dfm#4, tmp#3.lpi#4.dfm#4, tmp#5.lpi#4.dfm#4, tmp#7.lpi#4.dfm#4, tmp#9.lpi#4.dfm#4, tmp#11.sva#13, tmp#15.sva#13, tmp#3.sva#13, tmp#7.sva#13, tmp#13.sva#12, tmp#5.sva#12, tmp#9.sva#12, tmp#13.sva#18, tmp#5.sva#18, tmp#9.sva#18' (25 registers deleted). (FSM-3)
+# Info: Running transformation 'dpfsm' on solution 'DIT_RELOOP.v8': elapsed time 27.51 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-15)
+# Warning: Extrapolation detected. Script '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'dpfsm' on solution 'DIT_RELOOP.v8': elapsed time 37.24 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 6582, Real ops = 3137, Vars = 823 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'DIT_RELOOP.v8': elapsed time 12.68 seconds, memory usage 1642392kB, peak memory usage 1642392kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 5358, Real ops = 2358, Vars = 4781 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'DIT_RELOOP.v8' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.vhdl
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.vhd
+# Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.vhdl
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Error: Top function does not appear to have the CCS_BLOCK macro wrapping the function name
+# Info: Running transformation 'extract' on solution 'DIT_RELOOP.v8': elapsed time 16.29 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_rem_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_out_dreg_v2.v
+# Add dependent file: ../td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/rtl.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_r_beh_v5.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v8/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Running transformation 'extract' on solution 'DIT_RELOOP.v8': elapsed time 38.08 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Completed transformation 'extract' on solution 'DIT_RELOOP.v8': elapsed time 40.49 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 5330, Real ops = 2370, Vars = 750 (SOL-21)
+go assembly
+directive set /DIT_RELOOP/vec:rsc -INTERLEAVE 16
+# CU_DIRECTIVE sid12 SET /DIT_RELOOP/twiddle:rsc {INTERLEAVE 1}: Race condition
+# CU_DIRECTIVE sid12 SET /DIT_RELOOP/core/IDX_LOOP {UNROLL no}: Race condition
+# CU_DESIGN sid12 ADD {} {VERSION v9 SID sid12 BRANCH_SID sid11 BRANCH_STATE assembly INCREMENTAL 0 STATE assembly TRANSFORMING 0 SOLUTION_DIR {} CAT_DIR /home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/ SYNTHESIS_FLOWPKG OasysRTL UNITS {} STATES {} INPUTFILES {} OUTPUTFILES {} TECHCONFIG {/CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/nangate-45nm_beh/92 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ram_nangate-45nm_pipe_beh/100 /CONFIG/PARAMETERS/OasysRTL/PARAMETERS/Nangate/PARAMETERS/045nm/PARAMETERS/ccs_sample_mem/1} SOURCEHIER {} HIERCONFIG {} TECHLIBS {} ESTIMATOR {} FLOWPKGS {} SOLUTIONLIBS {} DATUM {} MESSAGES {} TOP {} SIF_DESIGN_HIER {} ALLOCS {} DIRAPPLIES {} SID_DATA {} SCOPED_C_INTERFACE {} FLOWS_API {} PROPERTIES {} OPT_INFOS {} name DIT_RELOOP}: Race condition
+# Info: Branching solution 'DIT_RELOOP.v9' at state 'assembly' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/DIT_RELOOP.v9/CDesignChecker/design_checker.sh'
+# /DIT_RELOOP/vec:rsc/INTERLEAVE 16
+directive set /DIT_RELOOP/twiddle:rsc -INTERLEAVE 16
+# /DIT_RELOOP/twiddle:rsc/INTERLEAVE 16
+directive set /DIT_RELOOP/core/IDX_LOOP -UNROLL 16
+# /DIT_RELOOP/core/IDX_LOOP/UNROLL 16
+project save
+# Saving project file '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult.ccs'. (PRJ-5)
+go extract
+# Info: Starting transformation 'loops' on solution 'DIT_RELOOP.v9' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(38): N_UNROLL parameter 16 not an exact divisor of 1025, the total number of loop iterations. (LOOP-8)
+# $PROJECT_HOME/src/ntt.cpp(38): Loop '/DIT_RELOOP/core/IDX_LOOP' is being partially unrolled 16 times. (LOOP-3)
+# $PROJECT_HOME/src/ntt.cpp(37): Loop '/DIT_RELOOP/core/GROUP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(33): Loop '/DIT_RELOOP/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Loop '/DIT_RELOOP/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'DIT_RELOOP.v9': elapsed time 2.30 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 598, Real ops = 183, Vars = 117 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'DIT_RELOOP.v9' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/base:rsc' (from var: base) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/m:rsc' (from var: m) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/return:rsc' (from var: return) mapped to 'mgc_ioport.mgc_out_dreg' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(5): I/O-Port Resource '/DIT_RELOOP/modulo_dev/ccs_ccore_start:rsc' (from var: ccs_ccore_start) mapped to 'ccs_ioport.ccs_in' (size: 1). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(29): Resource '/DIT_RELOOP/vec:rsc' split into 1 x 16 blocks (MEM-11)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(0)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(1)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(2)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(3)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(4)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(5)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(6)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(7)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(8)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(9)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(10)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(11)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(12)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(13)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(14)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/vec:rsc(0)(15)' (from var: vec) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): I/O-Port Resource '/DIT_RELOOP/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(29): I/O-Port Resource '/DIT_RELOOP/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 64). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(29): Resource '/DIT_RELOOP/twiddle:rsc' split into 1 x 16 blocks (MEM-11)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(0)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(1)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(2)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(3)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(4)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(5)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(6)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(7)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(8)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(9)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(10)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(11)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(12)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(13)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(14)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(29): Memory Resource '/DIT_RELOOP/twiddle:rsc(0)(15)' (from var: twiddle) mapped to 'ccs_sample_mem.ccs_ram_sync_1R1W' (size: 64 x 64). (MEM-4)
+# Info: Merged 'IDX_LOOP:f2:switch' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#1' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#1' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#2' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#2' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#3' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#3' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#4' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#4' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#5' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#5' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#6' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#6' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#7' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#7' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#8' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#8' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#9' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#9' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#10' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#10' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#11' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#11' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#12' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#12' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#13' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#13' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#14' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#14' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Merged 'IDX_LOOP:f2:switch#15' at $PROJECT_HOME/src/ntt.cpp(44) to 'IDX_LOOP:f1:switch#15' at $PROJECT_HOME/src/ntt.cpp(43). (OPT-16)
+# Info: Running transformation 'memories' on solution 'DIT_RELOOP.v9': elapsed time 27.60 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Running transformation 'memories' on solution 'DIT_RELOOP.v9': elapsed time 57.44 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Completed transformation 'memories' on solution 'DIT_RELOOP.v9': elapsed time 59.16 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 6475, Real ops = 183, Vars = 224 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'DIT_RELOOP.v9' (SOL-8)
+# Module 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0' in the cache is valid & accepted for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' (TD-3)
+# Reading solution library '/home/yl7897/NTT_Xilinx/Catapult/stockham_DIF/Catapult/td_ccore_solutions/modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234_0/.sif/solIndex_2_3fe98673-9cb0-4143-9483-0d03b237d875.xml' ... (LIB-129)
+# Module for CCORE 'modulo_dev_0dc217f8ce5f309b848fa994f59fa3f66234' has been successfully synthesized (TD-4)
+# Info: Completed transformation 'cluster' on solution 'DIT_RELOOP.v9': elapsed time 16.99 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 6463, Real ops = 181, Vars = 215 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'DIT_RELOOP.v9' (SOL-8)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 22.44 seconds, memory usage 1707928kB, peak memory usage 1707928kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 43.94 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 73.91 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-15)
+# Info: Running transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 95.89 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-15)
+# Design 'DIT_RELOOP' contains '4901' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'DIT_RELOOP.v9': elapsed time 104.70 seconds, memory usage 1716120kB, peak memory usage 1716120kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 23269, Real ops = 4901, Vars = 2764 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'DIT_RELOOP.v9' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/DIT_RELOOP/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 22.51 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 45.17 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 67.32 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 92.83 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# $PROJECT_HOME/src/ntt.cpp(38): Prescheduled LOOP '/DIT_RELOOP/core/IDX_LOOP' (177 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(37): Prescheduled LOOP '/DIT_RELOOP/core/GROUP_LOOP' (1 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(33): Prescheduled LOOP '/DIT_RELOOP/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(29): Prescheduled LOOP '/DIT_RELOOP/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(29): Prescheduled LOOP '/DIT_RELOOP/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(29): Prescheduled SEQUENTIAL '/DIT_RELOOP/core' (total length 117936522 c-steps) (SCHD-8)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 122.82 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 144.97 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 167.31 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 189.60 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 216.36 seconds, memory usage 1781656kB, peak memory usage 1781656kB (SOL-15)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 246.31 seconds, memory usage 1847192kB, peak memory usage 1847192kB (SOL-15)
+# Info: $PROJECT_HOME/src/ntt.cpp(29): Initial schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 118602767, Area (Datapath, Register, Total) = 641178.29, 25901.62, 667079.91 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 267.09 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 640959.73, 25901.62, 666861.36 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 288.39 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 309.73 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 339.58 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 361.13 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 381.56 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 403.22 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 432.37 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 462.28 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 483.62 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 504.68 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 526.49 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 555.87 seconds, memory usage 1912728kB, peak memory usage 1912728kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 118602767, Area (Datapath, Register, Total) = 639600.58, 25901.62, 665502.20 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 585.71 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 555625.80, 26309.62, 581935.43 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 608.01 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 553550.23, 26309.62, 579859.85 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 629.14 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 551513.86, 26309.62, 577823.48 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 650.89 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 549652.22, 26309.62, 575961.84 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 679.16 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 709.07 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 730.93 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 752.42 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 773.85 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 802.81 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 832.73 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 854.06 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 875.57 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 896.79 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 926.29 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 956.16 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 978.76 seconds, memory usage 1956380kB, peak memory usage 1956380kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 182562767, Area (Datapath, Register, Total) = 545952.56, 26309.62, 572262.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 999.73 seconds, memory usage 2003872kB, peak memory usage 2003872kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 524537.79, 26309.62, 550847.42 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1021.80 seconds, memory usage 2003872kB, peak memory usage 2003872kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 514550.20, 26309.62, 540859.82 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1049.89 seconds, memory usage 2003872kB, peak memory usage 2003872kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 500567.57, 26309.62, 526877.19 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1079.88 seconds, memory usage 2003872kB, peak memory usage 2003872kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 491472.03, 26309.62, 517781.66 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1102.69 seconds, memory usage 2003872kB, peak memory usage 2003872kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 491472.03, 26309.62, 517781.66 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1125.19 seconds, memory usage 2003872kB, peak memory usage 2003872kB (SOL-15)
+# Info: Optimized LOOP '/DIT_RELOOP/core/IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 491472.03, 26309.62, 517781.66 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1147.75 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1173.66 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: $PROJECT_HOME/src/ntt.cpp(29): Final schedule of SEQUENTIAL '/DIT_RELOOP/core': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24205.88, 371069.46 (CRAAS-12)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1203.65 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1226.20 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1249.41 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1272.35 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1297.31 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1327.28 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1349.81 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1372.14 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1394.37 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1421.07 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1451.07 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1473.62 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1496.03 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1518.00 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1544.71 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1574.78 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1597.81 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1620.84 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1642.95 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1668.54 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1698.53 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1721.25 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1743.18 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1766.06 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1792.22 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1822.21 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)
+# Info: Running transformation 'allocate' on solution 'DIT_RELOOP.v9': elapsed time 1844.65 seconds, memory usage 2069980kB, peak memory usage 2069980kB (SOL-15)
+# Info: Optimized LOOP 'IDX_LOOP': Latency = 342462767, Area (Datapath, Register, Total) = 346863.59, 24282.38, 371145.96 (CRAAS-18)

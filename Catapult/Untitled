@@ -1,0 +1,3 @@
+#include "ac_int.h"
+
+int34 sumsquare(int16 a, int16 b);

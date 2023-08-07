@@ -1,0 +1,626 @@
+//  Catapult Ultra Synthesis 10.5c/896140 (Production Release) Sun Sep  6 22:45:38 PDT 2020
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2020, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux jd4691@newnano.poly.edu 3.10.0-1062.4.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.5_3.0, HLS_PKGS v23.5_3.0, 
+//                       SIF_TOOLKITS v23.5_3.0, SIF_XILINX v23.5_3.0, 
+//                       SIF_ALTERA v23.5_3.0, CCS_LIBS v23.5_3.0, 
+//                       CDS_PPRO v10.3c_2, CDS_DesigChecker v10.5c, 
+//                       CDS_OASYS v19.1_3.7, CDS_PSR v20.1_0.0, 
+//                       DesignPad v2.78_1.0
+//  
+//  Start time Mon Sep  6 21:21:23 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log63741f42a0c7d.0"
+set_working_dir /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp
+option set Input/TargetPlatform x86_64
+option set Input/CppStandard c++11
+# c++11
+solution file add ./src/ntt_tb.cpp -exclude true
+# /INPUTFILES/1
+solution file add ./src/ntt.cpp
+# /INPUTFILES/2
+solution file add ./src/utils.cpp
+# /INPUTFILES/3
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Moving session transcript to file "/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/catapult.log"
+# Front End called with arguments: -- /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/utils.cpp /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp (CIN-69)
+# Edison Design Group C++/C Front End - Version 5.1 (CIN-1)
+# Warning: $PROJECT_HOME/include/config.h(19): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(19): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/config.h(19):           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp" (CRD-1)
+# Warning: $PROJECT_HOME/include/ntt.h(21): last line of file ends without a newline (CRD-1)
+# Warning: $PROJECT_HOME/include/ntt.h(21):           detected during compilation of secondary translation unit "/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/src/ntt.cpp" (CRD-1)
+# $PROJECT_HOME/src/ntt.cpp(38): Pragma 'hls_design<top>' detected on routine 'inPlaceNTT_DIF' (CIN-6)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 4.70 seconds, memory usage 1576300kB, peak memory usage 1576300kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/src/ntt.cpp(39): Found top design routine 'inPlaceNTT_DIF' specified by directive (CIN-52)
+# $PROJECT_HOME/src/ntt.cpp(39): Synthesizing routine 'inPlaceNTT_DIF' (CIN-13)
+# $PROJECT_HOME/src/ntt.cpp(39): Inlining routine 'inPlaceNTT_DIF' (CIN-14)
+# $PROJECT_HOME/src/ntt.cpp(13): Inlining routine 'modulo_add' (CIN-14)
+# $PROJECT_HOME/src/ntt.cpp(30): Inlining routine 'modulo_sub' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2812): Inlining routine 'operator<<32, true>' (CIN-14)
+# $PROJECT_HOME/src/utils.cpp(18): Inlining routine 'mult' (CIN-14)
+# $MGC_HOME/shared/include/ac_int.h(2813): Inlining routine 'operator>><96, false>' (CIN-14)
+# $PROJECT_HOME/src/ntt.cpp(39): Optimizing block '/inPlaceNTT_DIF' ... (CIN-4)
+# $PROJECT_HOME/src/ntt.cpp(39): INOUT port 'twiddle' is only used as an input. (OPT-10)
+# $PROJECT_HOME/src/ntt.cpp(39): INOUT port 'twiddle_h' is only used as an input. (OPT-10)
+# $PROJECT_HOME/src/ntt.cpp(43): Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' iterated at most 10 times. (LOOP-2)
+# $PROJECT_HOME/src/ntt.cpp(45): Loop '/inPlaceNTT_DIF/core/COMP_LOOP' iterated at most 1025 times. (LOOP-2)
+# Design 'inPlaceNTT_DIF' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'inPlaceNTT_DIF.v1': elapsed time 3.27 seconds, memory usage 1576300kB, peak memory usage 1576300kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 68, Real ops = 34, Vars = 25 (SOL-21)
+solution library add mgc_Xilinx-VIRTEX-7-1_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-7 -speed -1 -part xc7vx485tffg1157-1
+solution library add Xilinx_RAMS
+solution library add amba
+go libraries
+# Info: Starting transformation 'libraries' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Info: Please set ComponentLibs/TechLibSearchPath to enable flows that use downstream synthesis tools (LIB-220)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/mgc_Xilinx-VIRTEX-7-1_beh.lib' [mgc_Xilinx-VIRTEX-7-1_beh]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_xilinx/Xilinx_RAMS.lib' [Xilinx_RAMS]... (LIB-49)
+# Reading component library '$MGC_HOME/pkgs/ccs_libs/interfaces/amba/amba.lib' [amba]... (LIB-49)
+# Info: Completed transformation 'libraries' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.93 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'libraries': Total ops = 68, Real ops = 34, Vars = 25 (SOL-21)
+directive set SCHED_USE_MULTICYCLE true
+directive set DSP_EXTRACTION yes
+directive set -CLOCKS {clk {-CLOCK_PERIOD 10}}
+go memories
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.09 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 34, Vars = 25 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(48): Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(45): Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(43): Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(39): Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.03 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 78, Real ops = 34, Vars = 30 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(39): Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): Memory Resource '/inPlaceNTT_DIF/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(39): Memory Resource '/inPlaceNTT_DIF/twiddle_h:rsc' (from var: twiddle_h) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.95 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 78, Real ops = 34, Vars = 30 (SOL-21)
+go libraries
+go architect
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.03 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 78, Real ops = 34, Vars = 30 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Design 'inPlaceNTT_DIF' contains '38' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.78 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 105, Real ops = 38, Vars = 39 (SOL-21)
+go allocate
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/src/ntt.cpp(48): Prescheduled LOOP '/inPlaceNTT_DIF/core/VEC_LOOP' (6 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(45): Prescheduled LOOP '/inPlaceNTT_DIF/core/COMP_LOOP' (3 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(43): Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(39): Prescheduled LOOP '/inPlaceNTT_DIF/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(39): Prescheduled LOOP '/inPlaceNTT_DIF/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(39): Prescheduled SEQUENTIAL '/inPlaceNTT_DIF/core' (total length 92272 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 102518, Area (Datapath, Register, Total) = 9206.33, 0.00, 9206.33 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Final schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 112768, Area (Datapath, Register, Total) = 7369.33, 0.00, 7369.33 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF.v1': elapsed time 0.42 seconds, memory usage 1576812kB, peak memory usage 1576812kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 105, Real ops = 38, Vars = 39 (SOL-21)
+go extract
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Global signal 'vec:rsc.AWID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWADDR' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWLEN' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWSIZE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWBURST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWLOCK' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWCACHE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWPROT' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWQOS' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWREGION' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WDATA' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WSTRB' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WLAST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BRESP' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARADDR' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARLEN' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARSIZE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARBURST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARLOCK' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARCACHE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARPROT' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARQOS' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARREGION' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RDATA' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RRESP' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RLAST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Creating buffer for wait controller for component 'vec:rsc' (SCHD-46)
+# Global signal 'vec:rsc.tr_write_done' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.s_tdone' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'p:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
+# Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'r:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.AWID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WSTRB' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(46): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Info: $PROJECT_HOME/src/ntt.cpp(46): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.tr_write_done' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.s_tdone' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WSTRB' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(47): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Info: $PROJECT_HOME/src/ntt.cpp(47): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Global signal 'twiddle_h:rsc.tr_write_done' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.s_tdone' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'r:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle_h:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/src/ntt.cpp(39): Input port 'r:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF.v1': elapsed time 9.34 seconds, memory usage 1576860kB, peak memory usage 1576860kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1342, Real ops = 109, Vars = 727 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Warning: Extrapolation detected. Script '/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v1/adjust_char_library.tcl' generated. (LIB-142)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v1': elapsed time 1.26 seconds, memory usage 1576860kB, peak memory usage 1576860kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 892, Real ops = 181, Vars = 669 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF.v1': elapsed time 2.78 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 895, Real ops = 160, Vars = 843 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF.v1' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v1/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v1/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v1/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v1/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF.v1': elapsed time 9.45 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 889, Real ops = 164, Vars = 667 (SOL-21)
+go libraries
+directive set -CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Branching solution 'inPlaceNTT_DIF.v2' at state 'libraries' (PRJ-2)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v2/CDesignChecker/design_checker.sh'
+# /CLOCKS {clk {-CLOCK_PERIOD 5 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 2.5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+go extract
+# Info: Starting transformation 'assembly' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.10 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'assembly': Total ops = 68, Real ops = 34, Vars = 25 (SOL-21)
+# Info: Starting transformation 'loops' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(48): Loop '/inPlaceNTT_DIF/core/VEC_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(45): Loop '/inPlaceNTT_DIF/core/COMP_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(43): Loop '/inPlaceNTT_DIF/core/STAGE_LOOP' is left rolled. (LOOP-4)
+# $PROJECT_HOME/src/ntt.cpp(39): Loop '/inPlaceNTT_DIF/core/main' is left rolled. (LOOP-4)
+# Info: Completed transformation 'loops' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.04 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'loops': Total ops = 78, Real ops = 34, Vars = 30 (SOL-21)
+# Info: Starting transformation 'memories' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# $PROJECT_HOME/src/ntt.cpp(39): Memory Resource '/inPlaceNTT_DIF/vec:rsc' (from var: vec) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF/p:rsc' (from var: p) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): I/O-Port Resource '/inPlaceNTT_DIF/r:rsc' (from var: r) mapped to 'ccs_ioport.ccs_in' (size: 32). (MEM-2)
+# $PROJECT_HOME/src/ntt.cpp(39): Memory Resource '/inPlaceNTT_DIF/twiddle:rsc' (from var: twiddle) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# $PROJECT_HOME/src/ntt.cpp(39): Memory Resource '/inPlaceNTT_DIF/twiddle_h:rsc' (from var: twiddle_h) mapped to 'amba.ccs_axi4_slave_mem' (size: 1024 x 32). (MEM-4)
+# Info: Completed transformation 'memories' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.93 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'memories': Total ops = 78, Real ops = 34, Vars = 30 (SOL-21)
+# Info: Starting transformation 'cluster' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Warning: ROM clustering skipped Technology Library(ies) required for Prototyping not found (CLUSTER-24)
+# Info: Completed transformation 'cluster' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.03 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'cluster': Total ops = 78, Real ops = 34, Vars = 30 (SOL-21)
+# Info: Starting transformation 'architect' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Design 'inPlaceNTT_DIF' contains '38' real operations. (SOL-11)
+# Info: Completed transformation 'architect' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.34 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'architect': Total ops = 105, Real ops = 38, Vars = 39 (SOL-21)
+# Info: Starting transformation 'allocate' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+# $PROJECT_HOME/src/ntt.cpp(48): Prescheduled LOOP '/inPlaceNTT_DIF/core/VEC_LOOP' (11 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(45): Prescheduled LOOP '/inPlaceNTT_DIF/core/COMP_LOOP' (5 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(43): Prescheduled LOOP '/inPlaceNTT_DIF/core/STAGE_LOOP' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(39): Prescheduled LOOP '/inPlaceNTT_DIF/core/main' (2 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(39): Prescheduled LOOP '/inPlaceNTT_DIF/core/core:rlp' (0 c-steps) (SCHD-7)
+# $PROJECT_HOME/src/ntt.cpp(39): Prescheduled SEQUENTIAL '/inPlaceNTT_DIF/core' (total length 164022 c-steps) (SCHD-8)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Initial schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 174268, Area (Datapath, Register, Total) = 10093.33, 0.00, 10093.33 (CRAAS-11)
+# At least one feasible schedule exists. (CRAAS-9)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Final schedule of SEQUENTIAL '/inPlaceNTT_DIF/core': Latency = 184518, Area (Datapath, Register, Total) = 7493.33, 0.00, 7493.33 (CRAAS-12)
+# Resource allocation and scheduling done. (CRAAS-2)
+# Netlist written to file 'schedule.gnt' (NET-4)
+# Info: Completed transformation 'allocate' on solution 'inPlaceNTT_DIF.v2': elapsed time 0.40 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'allocate': Total ops = 105, Real ops = 38, Vars = 39 (SOL-21)
+# Info: Starting transformation 'schedule' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Performing concurrent resource allocation and scheduling on '/inPlaceNTT_DIF/core' (CRAAS-1)
+# Global signal 'vec:rsc.AWID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWADDR' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWLEN' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWSIZE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWBURST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWLOCK' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWCACHE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWPROT' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWQOS' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWREGION' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.AWREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WDATA' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WSTRB' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WLAST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.WREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BRESP' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.BREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARADDR' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARLEN' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARSIZE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARBURST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARLOCK' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARCACHE' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARPROT' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARQOS' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARREGION' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.ARREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RDATA' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RRESP' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RLAST' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RUSER' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RVALID' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.RREADY' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(49): Creating buffer for wait controller for component 'vec:rsc' (SCHD-46)
+# Global signal 'vec:rsc.tr_write_done' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'vec:rsc.s_tdone' added to design 'inPlaceNTT_DIF' for component 'vec:rsci' (LIB-3)
+# Global signal 'p:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'p:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Creating buffer for wait controller for component 'p:rsc' (SCHD-46)
+# Global signal 'r:rsc.dat' added to design 'inPlaceNTT_DIF' for component 'r:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(39): Creating buffer for wait controller for component 'r:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.AWID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.AWREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WSTRB' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.WREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.BREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.ARREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.RREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(46): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Info: $PROJECT_HOME/src/ntt.cpp(46): Creating buffer for wait controller for component 'twiddle:rsc' (SCHD-46)
+# Global signal 'twiddle:rsc.tr_write_done' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle:rsc.s_tdone' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.AWREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WSTRB' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.WREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.BREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARADDR' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARLEN' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARSIZE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARBURST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARLOCK' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARCACHE' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARPROT' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARQOS' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARREGION' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.ARREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RDATA' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RRESP' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RLAST' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RUSER' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RVALID' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.RREADY' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Info: $PROJECT_HOME/src/ntt.cpp(47): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Info: $PROJECT_HOME/src/ntt.cpp(47): Creating buffer for wait controller for component 'twiddle_h:rsc' (SCHD-46)
+# Global signal 'twiddle_h:rsc.tr_write_done' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'twiddle_h:rsc.s_tdone' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsci' (LIB-3)
+# Global signal 'vec:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'vec:rsc.triosy:obj' (LIB-3)
+# Global signal 'p:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'p:rsc.triosy:obj' (LIB-3)
+# Global signal 'r:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'r:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'twiddle:rsc.triosy:obj' (LIB-3)
+# Global signal 'twiddle_h:rsc.triosy.lz' added to design 'inPlaceNTT_DIF' for component 'twiddle_h:rsc.triosy:obj' (LIB-3)
+# Warning: $PROJECT_HOME/src/ntt.cpp(39): Input port 'r:rsc.dat' is never used. (OPT-4)
+# Report written to file 'cycle.rpt'
+# Info: Completed transformation 'schedule' on solution 'inPlaceNTT_DIF.v2': elapsed time 9.24 seconds, memory usage 1576920kB, peak memory usage 1576920kB (SOL-9)
+# Info: Design complexity at end of 'schedule': Total ops = 1755, Real ops = 108, Vars = 750 (SOL-21)
+# Info: Starting transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Performing FSM extraction... (FSM-1)
+# Creating shared register 'modulo_add:base.sva' for variables 'modulo_add:base.sva, mult:z:slc(mult:z:mul:cmp.z)(31-0).itm, factor2.sva' (2 registers deleted). (FSM-3)
+# Info: Completed transformation 'dpfsm' on solution 'inPlaceNTT_DIF.v2': elapsed time 1.65 seconds, memory usage 1642456kB, peak memory usage 1642456kB (SOL-9)
+# Info: Design complexity at end of 'dpfsm': Total ops = 951, Real ops = 187, Vars = 685 (SOL-21)
+# Info: Starting transformation 'instance' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Completed transformation 'instance' on solution 'inPlaceNTT_DIF.v2': elapsed time 2.85 seconds, memory usage 1642456kB, peak memory usage 1642456kB (SOL-9)
+# Info: Design complexity at end of 'instance': Total ops = 945, Real ops = 175, Vars = 883 (SOL-21)
+# Info: Starting transformation 'extract' on solution 'inPlaceNTT_DIF.v2' (SOL-8)
+# Report written to file 'rtl.rpt'
+# Generating scverify_top.cpp
+# Netlist written to file 'rtl.vhdl' (NET-4)
+# generate concat
+# order file name is: rtl.vhdl_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v2/concat_rtl.vhdl
+# order file name is: rtl.vhdl_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/amba_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/src/funcs.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_comps.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_comps_v5.vhd
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.vhd
+# Add dependent file: ./rtl.vhdl
+# Finished writing concatenated simulation file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v2/concat_sim_rtl.vhdl
+# Generating SCVerify testbench files
+# Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_vhdl/rtl.vhdl.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_vhdl/concat_rtl.vhdl.xv'
+# Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+# Netlist written to file 'rtl.v' (NET-4)
+# generate concat
+# order file name is: rtl.v_order.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v2/concat_rtl.v
+# order file name is: rtl.v_order_sim.txt
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/ccs_libs/interfaces/amba/ccs_axi4_slave_mem.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/hls_pkgs/mgc_comps_src/mgc_mul_pipe_beh.v
+# Add dependent file: /opt/mentorgraphics/Catapult_10.5c/Mgc_home/pkgs/siflibs/mgc_shift_l_beh_v5.v
+# Add dependent file: ./rtl.v
+# Finished writing concatenated simulation file: /home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3/inPlaceNTT_DIF.v2/concat_sim_rtl.v
+# Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+# Info: Xilinx Vivado synthesis script written to 'vivado_v/rtl.v.xv'
+# Info: Xilinx Vivado synthesis script written to 'vivado_concat_v/concat_rtl.v.xv'
+# Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Completed transformation 'extract' on solution 'inPlaceNTT_DIF.v2': elapsed time 9.89 seconds, memory usage 1642456kB, peak memory usage 1642456kB (SOL-9)
+# Info: Design complexity at end of 'extract': Total ops = 940, Real ops = 178, Vars = 683 (SOL-21)
+project save
+# Saving project file '/home/jd4691/research/NTT_Xilinx/Catapult/inplaceNTT_DIF_precomp/Catapult_3.ccs'. (PRJ-5)
